@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <canvas id="can" width="600" height="600"></canvas>
+</body>
+<script>
+  const canvas = document.getElementById('can')
+  const context = canvas.getContext('2d')
+  const moveToFunction = CanvasRenderingContext2D.prototype.moveTo
+  CanvasRenderingContext2D.prototype.lastLocation = {}
+
+  CanvasRenderingContext2D.prototype.moveTo = function (x, y) {
+    moveToFunction.apply(context, [x, y])
+    this.lastLocation.x = x
+    this.lastLocation.y = y
+  }
+
+  CanvasRenderingContext2D.prototype.dashedLineTo = function (x, y, dashLen = 5) {
+    const startX = this.lastLocation.x
+    const startY = this.lastLocation.y
+
+    const width = x - startX
+    const height = y - startY
+    const lineLength = Math.sqrt(width * width + height * height)
+    const dashNum = Math.floor(lineLength / dashLen)
+    const deltX = width / dashNum
+    const deltY = height / dashNum
+    const methods = ['moveTo', 'lineTo']
+    for (let i = 0; i < dashNum; i++) {
+      let method = methods[i % 2]
+      context[method](startX + i * deltX, startY + i * deltY)
+    }
+
+    this.moveTo(x, y)
+  }
+
+  context.lineWidth = 3;
+  context.strokeStyle = 'blue';
+
+  context.moveTo(20, 20);
+  context.dashedLineTo(context.canvas.width - 20, 20);
+  context.dashedLineTo(context.canvas.width - 20, context.canvas.height - 20);
+  context.dashedLineTo(20, context.canvas.height - 20);
+  context.dashedLineTo(20, 20);
+  context.dashedLineTo(context.canvas.width - 20, context.canvas.height - 20);
+  context.stroke();
+</script>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: linen;
+    }
+
+    #can {
+      margin: 20px;
+    }
+
+    #container {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="reset">reset</button>
+  <div id="container"></div>
+  <canvas id="can" width="800" height="520"></canvas>
+</body>
+<script>
+  window.onload = function () {
+    const canvas = document.getElementById('can');
+    const context = canvas.getContext('2d');
+
+    const resetBtn = document.getElementById('#reset');
+    const container = document.getElementById('container');
+    let img = new Image();
+
+    const containerRect = {
+      startX: 0,
+      startY: 0,
+      width: 0,
+      height: 0,
+      actualX: 0,
+      actualY: 0,
+      moving: false
+    }
+
+    let { left, top }  = canvas.getBoundingClientRect();
+    left = parseInt(left);
+    top = parseInt(top);
+
+    img.onload = function () {
+      context.drawImage(img, 0, 0, canvas.width, canvas.height);
+    }
+    img.src = '../shared/images/arch.png';
+
+    reset.onclick = function () {
+      context.clearRect(0, 0, canvas.width, canvas.height);
+      context.drawImage(img, 0,0,canvas.width-100,canvas.height-100, 0, 0, canvas.width, canvas.height);
+    }
+
+    function drawContainer() {
+      const width = Math.abs(containerRect.width);
+      const height = Math.abs(containerRect.height);
+      container.style.border = '1px solid lightblue';
+      container.style.width = width + 'px';
+      container.style.height = height + 'px';
+      container.style.left = containerRect.actualX + left + 'px';
+      container.style.top = containerRect.actualY + top + 'px';
+    }
+
+    canvas.addEventListener('mousedown', function (e) {
+      console.log('down')
+      const x = parseInt(e.clientX);
+      const y = parseInt(e.clientY);
+      containerRect.startX = x - left;
+      containerRect.startY = y - top;
+      containerRect.moving = true;
+    })
+
+    canvas.addEventListener('mousemove', function (e) {
+      console.log('mouve')
+      if (!containerRect.moving) return
+      const x = parseInt(e.clientX);
+      const y = parseInt(e.clientY);
+
+      containerRect.width = x - left - containerRect.startX;
+      containerRect.height = y - top - containerRect.startY;
+      containerRect.actualX = containerRect.width < 0 ? containerRect.startX + containerRect.width : containerRect.startX;
+      containerRect.actualY = containerRect.height < 0 ? containerRect.startY + containerRect.height : containerRect.startY;
+
+      drawContainer()
+    })
+
+    window.addEventListener('mouseup', function (e) {
+      console.log('up')
+      if (containerRect.moving) {
+        containerRect.moving = false;
+        // context.clearRect(0, 0, canvas.width, canvas.height);
+        try{
+          context.drawImage(canvas,
+          containerRect.actualX,
+          containerRect.actualY,
+          containerRect.width,
+          containerRect.height,
+          // Math.abs(containerRect.width),
+          // Math.abs(containerRect.height),
+          0, 0, canvas.width, canvas.height);
+
+          container.style.left = 0;
+          container.style.top = 0;
+          container.style.width = 0;
+          container.style.height = 0;
+          container.style.border = none;
+          
+
+        }catch(err){
+          console.log(err)
+        }
+      }
+
+    })
+  }
+
+</script>
+
+</html>

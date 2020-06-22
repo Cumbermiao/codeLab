@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <canvas id="can" width="600" height="600"></canvas>
+</body>
+<script>
+  const canvas = document.getElementById('can')
+  const context = canvas.getContext('2d')
+  context.lineJoin = 'round'
+  context.lineWidth = 20
+  context.font = '24px MicrosoftYahei'
+  context.fillText('Click anywhere to erase', 175,200)
+
+  context.strokeStyle = 'goldenrod';
+  context.fillStyle = 'rgba(0,0,255,0.5)'
+
+  context.strokeRect(75, 100, 200, 200)
+  context.fillRect(325, 100, 200, 200)
+
+  context.canvas.onmousedown = function (e){
+    context.clearRect(0, 0, canvas.width, canvas.height)
+  }
+</script>
+</html>

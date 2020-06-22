@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <canvas id="can" width="600" height="600"></canvas>
+  <script>
+    const canvas = document.getElementById('can')
+    const context = canvas.getContext('2d')
+
+    function drawRoundCorner(x, y, width, radius, fillStyle = 'white', strokeStyle = 'black') {
+      context.beginPath()
+      context.fillStyle = fillStyle
+      context.strokeStyle = strokeStyle
+      context.lineWidth = 2
+      //left-top
+      if (width > 0) context.moveTo(x + radius, y)
+      else context.moveTo(x - radius, y)
+      context.fillStyle = 'blue'
+      context.fillRect(x + radius, y, 5,5)
+      context.fillStyle = 'red'
+      context.arcTo( x+width, y, x+width, y + width, radius)
+      context.stroke()
+    }
+
+    drawRoundCorner(50,50, 100, 20)
+  </script>
+</body>
+
+</html>

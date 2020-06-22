@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <canvas id="can" width="295" height="413"></canvas>
+
+</body>
+<script>
+
+
+  window.onload = function () {
+    var img = new Image();
+    var url = './a.jpg';
+
+    var canvas = document.getElementById('can');
+    var context = canvas.getContext('2d');
+
+    function drawImg() {
+      context.beginPath();
+      context.drawImage(img, 0, 0, canvas.width, canvas.height);
+    }
+
+    img.onload = function () {
+      console.log('begin')
+      drawImg()
+    }
+    img.src = url;
+
+
+  }
+</script>
+
+</html>

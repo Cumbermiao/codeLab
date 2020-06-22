@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <canvas id="can" width="600" height="400"></canvas>
+
+  <script>
+    const canvas = document.getElementById('can')
+    const context = canvas.getContext('2d')
+
+    context.font = '24px MicrosoftYahei'
+    context.strokeStyle = 'lightblue'
+    context.fillStyle = 'red'
+    context.lineWidth = '2'
+
+    context.strokeText('Stroke', 70, 20)
+    context.fillText('Fill', 270,20)
+
+    context.strokeText('Stroke&Fill',450, 20)
+    context.fillText('Stroke&Fill',450, 20)
+
+    //rect
+    context.lineWidth = 4
+    context.beginPath()
+    context.rect(70, 120, 50, 50)
+    context.stroke()
+
+    context.beginPath()
+    context.rect(270,120,50,50)
+    context.fill()
+
+    context.beginPath()
+    context.rect(470,120,50,50)
+    context.stroke()
+    context.fill()
+
+    //open arcs
+    context.beginPath()
+    context.arc(70,220,30,0,Math.PI*3/2)
+    context.stroke()
+
+    context.beginPath()
+    context.arc(270,220,30,0,Math.PI*3/2)
+    context.fill()
+
+    context.beginPath()
+    context.arc(470,220,30,0,Math.PI*3/2)
+    context.fill()
+    context.stroke()
+
+    //closed arcs
+    context.beginPath()
+    context.arc(70,320,30,0,Math.PI*3/2)
+    context.closePath()
+    context.stroke()
+
+    context.beginPath()
+    context.arc(270,320,30,0,Math.PI*3/2)
+    context.closePath()
+    context.fill()
+
+    context.beginPath()
+    context.arc(470,320,30,0,Math.PI*3/2)
+    context.closePath()
+    context.fill()
+    context.stroke()
+  </script>
+</body>
+</html>

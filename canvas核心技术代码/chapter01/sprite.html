@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>精灵坐标查看器</title>
+  <style>
+  body{
+    text-align: center;
+    background: #ddd;
+  }
+  canvas{
+    border: 1px solid #ccc;
+    margin-top: 100px;
+    background: #fff;
+  }
+  </style>
+</head>
+<body>
+  <div id="readout"></div>
+  <canvas id="can" width="500" height="300"></canvas>
+</body>
+<script>
+var canvas = document.getElementById('can');
+var readout = document.getElementById('readout');
+var context = canvas.getContext('2d');
+var sprite = new Image();
+
+function drawBg(){
+  var lineHeight = 12;
+  var height = context.canvas.height;
+  var width = context.canvas.width;
+
+  context.clearRect(0,0,context.canvas.width, height);
+  context.strokeStyle = '#000';
+  context.lineWidth = 0.5;
+
+  for(var i=height-lineHeight;i>lineHeight*4;i -= lineHeight){
+    context.beginPath();
+    context.moveTo(0, i);
+    context.lineTo(width, i);
+    context.stroke();
+  }
+
+}
+
+function drawSprite(){
+  context.drawImage(sprite, 0, 0);
+}
+
+function getCoordinateInCanvas(clientX,clientY){
+  var { top, left} = canvas.getBoundingClientRect();
+  return {
+    x:clientX - left,
+    y:clientY - top
+  }
+}
+
+function drawCrossLine(x,y){  
+  context.strokeStyle = 'rgba(0,0,255,0.8)';
+  context.lineWidth = 0.5;
+
+  context.beginPath();
+  context.moveTo(0,y);
+  context.lineTo(canvas.width,y);
+  context.stroke()
+
+  context.beginPath();
+  context.moveTo(x,0);
+  context.lineTo(x,canvas.height);
+  context.stroke()
+}
+
+function updateLocation(x,y){
+  readout.innerHTML = `(${x.toFixed(2)} , ${y.toFixed(2)})`
+}
+
+
+window.onload = function(){
+  drawBg();
+  sprite.src = '../shared/images/running-sprite-sheet.png';
+  sprite.onload = function(){
+    drawSprite();
+  }
+
+
+  canvas.onmousemove = function(e){
+    drawBg();
+    drawSprite();
+    var {x,y} = getCoordinateInCanvas(e.clientX,e.clientY)
+    drawCrossLine(x,y)
+    updateLocation(x,y)
+  }
+
+}
+</script>
+</html>

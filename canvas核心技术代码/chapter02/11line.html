@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <select name="color" id="color">
+      <option value="red">red</option>
+      <option value="blue">blue</option>
+      <option value="rgba(100, 140, 230, 0.5)">rgba(100, 140, 230, 0.5)</option>
+    </select>
+  </div>
+  <canvas id="can" width="600" height="400"></canvas>
+</body>
+<script>
+  const canvas = document.getElementById('can')
+  const context = canvas.getContext('2d')
+  const select = document.querySelector('#color')
+  let lineColor = select.value
+  let drag = false
+  let from = {}
+  let to = {}
+  let surfaceImage = null
+
+  select.onchange = function(e){
+    lineColor = e.target.value
+  }
+
+  function drawGrid(step=10) {
+    context.lineWidth = 0.5
+    context.strokeStyle = 'lightgrey'
+    for (let x = step + 0.5; x < canvas.width; x += step) {
+      context.beginPath()
+      context.moveTo(x, 0)
+      context.lineTo(x, canvas.height)
+      context.stroke()
+    }
+
+    for (let y = step + 0.5; y < canvas.height; y += step) {
+      context.beginPath()
+      context.moveTo(0, y)
+      context.lineTo(canvas.width, y)
+      context.stroke()
+    }
+  }
+
+  function drawLine(from,to,color=lineColor){
+    context.beginPath()
+    context.moveTo(from.x,from.y)
+    context.lineTo(to.x,to.y)
+    context.stroke()
+  }
+
+  function windowToCanvas(x,y){  
+    const box = canvas.getBoundingClientRect()
+    return {
+      x: x - box.left,
+      y: y - box.top
+    }
+  }
+
+  function saveSurface(){
+    surfaceImage = context.getImageData(0,0,canvas.width,canvas.height)
+  }
+
+  function restoreSurface(){
+    context.putImageData(surfaceImage, 0,0)
+  }
+
+  canvas.onmousedown = function(e){
+    e.preventDefault()
+    saveSurface()
+    drag = true
+    from = windowToCanvas(e.clientX,e.clientY)
+  }
+
+  canvas.onmousemove = function(e){
+    if(drag){
+      e.preventDefault()
+      restoreSurface()
+      const {x,y} = windowToCanvas(e.clientX,e.clientY)
+      context.strokeStyle = lineColor
+      context.beginPath()
+      context.moveTo(from.x,from.y)
+      context.lineTo(x,y)
+      context.stroke()
+    }
+  }
+
+  canvas.onmouseup = function(e){
+    if(drag){
+      drag = false
+      restoreSurface()
+      const {x,y} = windowToCanvas(e.clientX,e.clientY)
+      context.strokeStyle = lineColor
+      context.beginPath()
+      context.moveTo(from.x,from.y)
+      context.lineTo(x,y)
+      context.stroke()
+    }
+  }
+  
+
+  drawGrid()
+
+</script>
+</html>

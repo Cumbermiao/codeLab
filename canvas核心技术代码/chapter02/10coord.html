@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #can {
+      background: #ffffff;
+      cursor: pointer;
+      margin-left: 10px;
+      margin-top: 10px;
+      -webkit-box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="can" width="800" height="800"></canvas>
+</body>
+<script>
+  const MARGIN = 40
+  const GAP = 10
+  const TITCK_COLOR = 'blue'
+
+  const canvas = document.getElementById('can')
+  const context = canvas.getContext('2d')
+  const startX = MARGIN
+  const endX = canvas.width - MARGIN
+  const startY = canvas.height - MARGIN
+  const endY = MARGIN
+
+  function drawGrid(step) {
+    context.lineWidth = 0.5
+    context.strokeStyle = 'lightgrey'
+    for (let x = step + 0.5; x < canvas.width; x += step) {
+      context.beginPath()
+      context.moveTo(x, 0)
+      context.lineTo(x, canvas.height)
+      context.stroke()
+    }
+
+    for (let y = step + 0.5; y < canvas.height; y += step) {
+      context.beginPath()
+      context.moveTo(0, y)
+      context.lineTo(canvas.width, y)
+      context.stroke()
+    }
+
+  }
+
+  function drawCoord() {
+
+    context.beginPath()
+    context.lineWidth = 1
+    context.strokeStyle = 'black'
+    context.moveTo(startX + 0.5, startY + 0.5)
+    context.lineTo(startX + 0.5, endY + 0.5)
+    context.stroke()
+
+    context.beginPath()
+    context.moveTo(startX + 0.5, startY + 0.5)
+    context.lineTo(endX + 0.5, startY + 0.5)
+    context.stroke()
+  }
+
+  function drawTick() {
+      context.strokeStyle = TITCK_COLOR
+    for(let x = startX+GAP+0.5; x<endX; x+=GAP){
+      context.beginPath()
+      context.moveTo(x,startY)
+      context.lineTo(x,startY-5)
+      context.stroke()
+    }
+
+    for(let y = startY - GAP-0.5; y>endY; y-=GAP){
+      context.beginPath()
+      context.moveTo(startX, y)
+      context.lineTo(startX+5, y)
+      context.stroke()
+    }
+  }
+
+  function draw() {
+    context.fillStyle = 'white'
+    context.fillRect(0, 0, canvas.width, canvas.height)
+    context.stroke()
+
+    drawGrid(10)
+    drawCoord()
+    drawTick()
+  }
+
+  draw()
+</script>
+
+</html>

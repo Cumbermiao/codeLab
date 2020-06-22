@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <canvas id="can" width="600" height="400"></canvas>
+</body>
+<script>
+  const canvas = document.getElementById('can')
+  const context = canvas.getContext('2d')
+
+  function drawDashedLine(from, to, dashLength = 5) {
+    const width = to.x - from.x
+    const height = to.y - from.y
+    const length = Math.sqrt(width * width+ height * height)
+    const dashNum = Math.floor(length / dashLength)
+    const gapX = width / dashNum
+    const gapY = height / dashNum
+    const methods = ['moveTo', 'lineTo',]
+    console.log(length,dashNum,width,height,gapX,gapY)
+    for (let i = 0; i < dashNum; i++) {
+      context[methods[(i % 2)]](from.x + gapX * i, from.y + gapY * i)
+    }
+
+    context.stroke()
+  }
+
+  context.lineWidth = 3;
+  context.strokeStyle = 'blue';
+
+  drawDashedLine({x:20,y:20}, {x:context.canvas.width - 20, y:20});
+  drawDashedLine({x:context.canvas.width - 20,y:20}, {x:context.canvas.width - 20, y:context.canvas.height - 20});
+  drawDashedLine({x:context.canvas.width - 20,y:context.canvas.height - 20}, {x:20, y:context.canvas.height - 20  });
+  drawDashedLine({x: 20,y:context.canvas.height - 20}, {x:20, y:20  });
+  // drawDashedLine(context, context.canvas.width - 20, 20, context.canvas.width - 20, context.canvas.height - 20, 10);
+  // drawDashedLine(context, context.canvas.width - 20, context.canvas.height - 20, 20, context.canvas.height - 20, 15);
+  // drawDashedLine(context, 20, context.canvas.height - 20, 20, 20, 2);
+</script>
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+    }
+
+    .grassplane {
+      position: absolute;
+      padding: 20px;
+      background: rgba(255, 255, 255, .3);
+      top: 50px;
+      left: 50px;
+      color: lightcoral;
+    }
+
+    .operation {
+      font-size: 20px;
+      color: lightsalmon;
+      cursor: pointer;
+    }
+
+    #can {
+      margin: 50px 0 0 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="grassplane">
+    <h1>Bounce 100 Balls</h1>
+    <a class="operation">Start</a>
+  </div>
+  <canvas id="can" width="600" height="400"></canvas>
+</body>
+<script>
+  window.onload = function () {
+    let bouncing = false;
+    const canvas = document.getElementById('can');
+    const context = canvas.getContext('2d');
+    let cancelId = null;
+
+    const operation = document.querySelector('.operation');
+    const balls = new Array(100);
+
+    for (let i = 0; i < balls.length; i++) {
+      let radius = Math.floor(Math.random() * 40);
+      let color = `rgba(${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${Math.random().toFixed(2)})`;
+      let velocity = {
+        x: Math.floor(Math.random() * 5 + 2),
+        y: Math.floor(Math.random() * 5 + 2)
+      }
+      balls[i] = {
+        radius,
+        color,
+        velocity,
+        position: {
+          x: 40,
+          y: 40
+        }
+      }
+    }
+
+
+    operation.addEventListener('click', function (e) {
+      bouncing = !bouncing;
+      if (bouncing) {
+        operation.innerText = 'Stop';
+        startBounce()
+      } else {
+        operation.innerText = 'Start'
+        stopBounce()
+      }
+    })
+
+
+    function drawGrid(context, stepX, stepY) {
+      context.lineWidth = 0.5;
+      context.strokeStyle = 'grey';
+      const width = context.canvas.width;
+      const height = context.canvas.height;
+      let i = 0;
+      for (; i <= width; i += stepX) {
+        context.beginPath();
+        context.moveTo(i, 0);
+        context.lineTo(i, height);
+        context.stroke()
+      }
+      i = 0;
+      for (; i <= height; i += stepY) {
+        context.beginPath();
+        context.moveTo(0, i);
+        context.lineTo(width, i);
+        context.stroke()
+      }
+    }
+
+    drawGrid(context,10,10)
+
+    function startBounce() {
+      drawBalls(context)
+      cancelId = requestAnimationFrame(function(){
+        startBounce()
+      });
+      // setInterval(function(){
+      //   console.log('interval')
+      //   drawBalls(context)
+      // },1000/60)
+    }
+    function stopBounce() {
+      cancelAnimationFrame(cancelId);
+    }
+
+    function drawBalls(context) {
+      context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+      drawGrid(context, 10, 10);
+      balls.forEach(item => {
+        context.beginPath();
+        context.arc(item.position.x, item.position.y, item.radius, 0, Math.PI * 2);
+        context.fillStyle = item.color;
+        context.fill();
+        nextPos(context, item)
+      })
+    }
+    drawBalls(context)
+
+    function nextPos(context, item) {
+      const width = context.canvas.width;
+      const height = context.canvas.height;
+      if (item.position.x + item.velocity.x + item.radius > width || item.position.x + item.velocity.x < 0) {
+        item.velocity.x = -item.velocity.x
+      }
+      if (item.position.y + item.velocity.y + item.radius > height || item.position.y + item.velocity.y < 0) {
+        item.velocity.y = -item.velocity.y
+      }
+      item.position.x += item.velocity.x;
+      item.position.y += item.velocity.y;
+    }
+  }
+
+</script>
+
+</html>

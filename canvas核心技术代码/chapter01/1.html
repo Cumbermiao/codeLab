@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  .large{
+    width: 600px;
+    height: 300px;
+  }
+  </style>
+</head>
+<body>
+  <canvas id="can"></canvas>
+  <button onclick="changeByCss()">通过 css 修改宽高</button>
+  <button onclick="changeByAttr()">通过 width height属性 修改宽高</button>
+</body>
+<script>
+var canvas = document.getElementById('can');
+var context = canvas.getContext('2d');
+context.font = '38px Arial';
+context.fillStyle = 'lightblue';
+context.strokeStyle = 'blue';
+context.fillText('Hello Canvas',canvas.width/2 - 150, canvas.height/2+15);
+context.strokeText('Hello Canvas',canvas.width/2 - 150, canvas.height/2+15);
+
+console.dir(canvas)
+function changeByCss(){
+  canvas.style.width = '600px';
+  canvas.style.height = '300px';
+}
+
+function changeByAttr(){
+  canvas.width=600;
+  canvas.height=300
+}
+</script>
+</html>

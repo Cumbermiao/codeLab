@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <label><input type="radio" name="repeat" value="repeat"> repeat</label> 
+    <label><input type="radio" name="repeat" value="repeat-x"> repeat-x</label> 
+    <label><input type="radio" name="repeat" value="repeat-y"> repeat-y</label> 
+    <label><input type="radio" name="repeat" value="no-repeat"> no-repeat</label> 
+  </div>
+  <canvas id="can" width="500" height="500"></canvas>
+
+  <script>
+    const canvas = document.getElementById('can')
+    const context = canvas.getContext('2d')
+    let repeat = 'no-repeat'
+    const radio = document.querySelector(`[value=${repeat}]`)
+    radio.checked = true
+
+    window.addEventListener('click', function(e){
+      if(e.target.tagName==='INPUT'&&e.target.type==='radio'){
+        if(repeat === e.target.value)return 
+        repeat = e.target.value
+        renderImg()
+      }
+    })
+
+    const img = new Image()
+    const src = '../static/box-warning.gif'
+    img.src = src
+
+    function renderImg(image=img,repeatVal=repeat){
+      const pattern = context.createPattern(image,repeatVal)
+      context.clearRect(0,0,canvas.width,canvas.height)
+      context.fillStyle = pattern
+      context.fillRect(0,0,canvas.width,canvas.height)
+      context.fill()
+    }
+
+    img.onload = function(){
+      renderImg()
+    }
+
+
+
+  </script>
+</body>
+</html>

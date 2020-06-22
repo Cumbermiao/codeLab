@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <canvas id="can" width="500" height="500"></canvas>
+
+  <script>
+    const canvas = document.getElementById('can')
+    const context = canvas.getContext('2d')
+    const gradient = context.createLinearGradient(0, 0, canvas.width, 0)
+
+    gradient.addColorStop(0, 'blue');
+    gradient.addColorStop(0.25, 'white');
+    gradient.addColorStop(0.5, 'purple');
+    gradient.addColorStop(0.75, 'red');
+    gradient.addColorStop(1, 'yellow');
+
+    context.fillStyle = gradient;
+    context.rect(0,0,canvas.width, canvas.height)
+    context.fill()
+  </script>
+</body>
+</html>

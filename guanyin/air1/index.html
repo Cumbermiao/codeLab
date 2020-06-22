@@ -1,0 +1,543 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: wangyonglin3
+  Date: 2019/7/29
+  Time: 14:00
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<link rel="stylesheet" href="lib/bootstrap.min.css">
+<link rel="stylesheet" href="lib/toastr.min.css">
+<link rel="stylesheet" href="lib/layer.css">
+<link rel="stylesheet" href="lib/bootstrap-table.min.css">
+<link rel="stylesheet" href="lib/bootstrap-table-fixed-columns.css">
+<link rel="stylesheet" href="lib/blue.css">
+<link rel="stylesheet" href="lib/bootstrap-toggle.min.css">
+<link rel="stylesheet" href="lib/datatables.css">
+<link rel="stylesheet" href="lib/bootstrap-select.css">
+<script type="text/javascript" charset="utf-8" src="lib/jquery-3.2.1.min.js?v=1245"></script>
+<script type="text/javascript" charset="utf-8" src="lib/axios.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="lib/popper.min.js?v=1245"></script>
+<script type="text/javascript" charset="utf-8" src="lib/bootstrap.bundle.min.js?v=1245"></script>
+<script type="text/javascript" charset="utf-8" src="lib/bootstrap-table.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="lib/bootstrap-table-zh-CN.js"></script>
+<script type="text/javascript" charset="utf-8" src="lib/bootstrap-table-fixed-columns.js"></script>
+<script src="libr/layer.js"></script>
+<script type="text/javascript" charset="utf-8" src="lib/toastr.min.js?v=1245"></script>
+<script type="text/javascript" charset="utf-8" src="lib/ajaxfileupload.js"></script>
+<script type="text/javascript" charset="utf-8" src="lib/laydate.js"></script>
+<script type="text/javascript" charset="utf-8" src="lib/moment-with-locales.min.js"></script>
+<script src="lib/icheck.js"></script>
+<script src="lib/bootstrap-toggle.min.js"></script>
+<script src="lib/datatables.js"></script>
+<script type="text/javascript" src="lib/bootstrap-select.js"></script>
+<script type="text/javascript" src="lib/defaults-zh_CN.js"></script>
+<script type="text/javascript" src="lib/global_constant.js"></script>
+
+<style>
+  .air-table {
+    padding: 1em;
+  }
+
+  .checkbox-group {
+    margin-left: -15px;
+    border: 1px solid #dee2e6;
+    border-left: none;
+    padding: 1em;
+    font-size: 12px;
+    height: 100%;
+  }
+
+  /* .nation-tab {
+    display: none;
+  } */
+
+  .air-table-header,
+  .air-table-inland,
+  .air-table-nation {
+    text-align: center;
+    padding: 1em;
+    border: 1px solid #dee2e6;
+    border-bottom: none;
+  }
+
+  .air-table-nation, .air-table-inland {
+    float: left;
+    width: 50%;
+    border: 1px solid #dee2e6;
+  }
+  .inland-tab,.nation-tab{
+    border: 1px solid #dee2e6;
+  }
+
+
+  .checkbox-list .form-check-inline {
+    width: 100px;
+  }
+
+  .bootstrap-table .fixed-table-container .fixed-table-body {
+    height: inherit;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .no-result {
+    display: none;
+  }
+</style>
+<script type="text/javascript" charset="utf-8" src="index3.js"></script>
+
+<div class="container-fluid" style="font-size: 12px">
+  <!-- Content here -->
+  <div class="card   mb-3">
+    <div class="card-header   text-white" style="background-color: #337ab7;">查询信息</div>
+    <div class="card-body">
+      <form id="form">
+        <div class="form-group row">
+          <label style="text-align: center;" class="col-sm-1 col-form-label">参数ID</label>
+          <div class="col-sm-1">
+            <input type="text" class="form-control" id="paramId" placeholder="参数ID">
+          </div>
+          <label style="text-align: center;" class="col-sm-1 col-form-label">参数名称</label>
+          <div class="col-sm-1">
+            <input type="text" class="form-control" id="airlinePriceBaseSetName" placeholder="参数名称">
+          </div>
+          <label style="text-align: center;" class="col-sm-1 col-form-label">航线名称</label>
+          <div class="col-sm-3 row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="出发城市三字码" id="depCode"
+                style="text-transform:uppercase">
+            </div>
+            <label style="text-align: center;" class="col-form-label">---></label>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="到达城市三字码" id="arrCode"
+                style="text-transform:uppercase">
+            </div>
+          </div></br>
+
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-9 offset-3  align-self-end" style="text-align: right;">
+            <button type="button" class="btn btn-outline-secondary addParam" data-toggle="modal"
+              data-target="#exampleModal" style="margin: 0px 10px;">+生成参数</button>
+            <button type="button" class="btn btn-outline-warning " id="reset" style="margin: 0px 10px;">重置</button>
+            <button type="button" class="btn btn-outline-success " id="search" style="margin-left: 10px;">查询</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <div class="card border-secondary mb-3">
+    <div class="card-header  text-white" style="background-color: #337ab7;">结果</div>
+    <div id="toolbar"></div>
+    <div class="card-body text-secondary">
+      <table id="table" style="font-size: 12px"></table>
+    </div>
+  </div>
+</div>
+
+<!-- 新增 Modal -->
+<div class="modal fade bd-example-modal-lg J-form-modal" id="exampleModal" tabindex="-1" style="font-size: 12px"
+  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content border-secondary ">
+      <div class="modal-header bg-transparent border-secondary text-secondary">
+        <h5 class="modal-title" id="exampleModalLabel">升舱活动</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body J-modal-content"></div>
+
+      <div class="modal-footer text-secondary">
+        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-outline-info" id="modalSave">保存</button>
+        <button type="button" class="btn btn-outline-info J-update" id="modalUpdate" style="display: none;">修改</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 查看 Modal -->
+<div class="modal fade bd-example-modal-lg  J-detail-modal" id="exampleModal2" tabindex="-1" style="font-size: 12px"
+  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content border-secondary ">
+      <div class="modal-header bg-transparent border-secondary text-secondary">
+        <h5 class="modal-title" id="">升舱活动</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body J-detail-modal-content">
+        
+      </div>
+
+      <div class="modal-footer text-secondary">
+        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">关闭</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script id="J-air-table-header-temp" type="text/x-template">
+  <div class="air-table-header ">
+    {{airTypeLabel}}
+    <div class="form-check">
+      <input type="checkbox" name="{{airType}}" class="form-check-input J-{{airType}}-all">
+      <label class="form-check-label" for="all">全部{{airTypeLabel}}</label>
+    </div>
+  </div>
+</script>
+
+<script id="J-priceInfo" type="text/x-template">
+  <div class='container'>
+    <div class="row">
+      <div class="col-2">成人</div>
+      <div class="col-6">
+        <input type="text" class='form-control' name="adult" value='{{adult}}' oninput="(function(e){e.target.value = e.target.value.replace(/[^\d]/g,'')})(event)">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2">儿童</div>
+      <div class="col-6">
+        <input type="text" class='form-control' name="child" value='{{child}}' oninput="(function(e){e.target.value = e.target.value.replace(/[^\d]/g,'')})(event)">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2">婴儿</div>
+      <div class="col-6">
+        <input type="text" class='form-control' name="baby" value='{{baby}}' oninput="(function(e){e.target.value = e.target.value.replace(/[^\d]/g,'')})(event)">
+      </div>
+    </div>
+  </div>
+</script>
+
+<script id="J-detail-priceInfo" type="text/x-template">
+  <div class='container'>
+    <div class="row">
+      <div class="col-2">成人</div>
+      <div class="col-6">
+        {{adult}} ( {{unit}} )
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2">儿童</div>
+      <div class="col-6">
+        {{child}} ( {{unit}} )
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2">婴儿</div>
+      <div class="col-6">
+        {{baby}} ( {{unit}} )
+      </div>
+    </div>
+  </div>
+</script>
+
+<script id="J-initFormModal" type="text/x-template">
+  <div class="form-group row J-id" id="targetId">
+    <label class="col-sm-2 col-form-label">参数ID</label>
+    <div class="col-sm-10">
+      <input type="text" style="width: 200px; background-color: #EEEEEE;" disabled="readonly" class="form-control " name="id" id="id" value="">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">升舱类型</label>
+    <div class="col-sm-10">
+        <select class="form-control text-secondary" id="modalUpgfType" name="upgfType" style="width: 200px; ">
+            <option value="1">登机口升舱</option>
+            <option value="2">竞价升舱</option>
+            <option value="3">机上升舱</option>
+        </select>
+    </div>
+  </div>
+
+  {{airlineTypeSelect}}
+
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">航线信息</label>
+    {{airlineTemplate}}
+  </div>
+
+  <!-- 座位信息 -->
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label"> 
+      {{seatLabel}} 
+    </label>
+    <div class="col-12">
+      <form class="J-seat-form">
+        <table class="seat-table J-seat-table"></table>
+      </form>
+    </div>
+  </div>
+
+  <!-- 价格信息 -->
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">价格信息</label>
+    <div class="col-12">
+      <table class="price-table J-price-table"></table>
+    </div>
+  </div>
+
+  <!-- 舱位信息 -->
+  {{cabinSeatTemplate}}
+
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">参数名称</label>
+    <div class="col-sm-5">
+        <input type="text" class="form-control" id="modalAirlinePriceBaseSetName" placeholder="参数名称"
+               name="airlinePriceBaseSetName">
+    </div>
+</div>
+  
+</script>
+
+<script id="J-airline-temp1" type="text/x-template">
+<div class="col-sm-12 air-table">
+    <div class="container">
+      <div class="row">
+        <div class="J-air-table-inland air-table-inland">
+            国内航线
+            <div class="form-check">
+                <input type="checkbox" name="inland" class="form-check-input J-inland-all" id="inland">
+                <label class="form-check-label" for="inland">全部国内航线</label>
+            </div>
+        </div>
+        <div class="J-air-table-nation air-table-nation">
+            国际/地区航线
+            <div class="form-check">
+                <input type="checkbox" name="nation" class="form-check-input J-nation-all" id="nation">
+                <label class="form-check-label" for="nation">全部国际/地区航线</label>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="container inland-tab J-inland-tab" >
+        <div class="row">
+          <div class="col-3" style="overflow-y: auto;max-height: 200px">
+            <div class="list-group J-inland-tablist" role="tablist">
+              {{inlandTabList}}
+            </div>
+          </div>
+          <div class="col-9" style="overflow-y: auto;max-height: 200px">
+              <form class="J-inland-form">
+                  <div class="tab-content J-inland-tab-content">
+                    {{inlandTabContent}}
+                  </div>
+              </form>
+          </div>
+        </div>
+    </div>
+    <div class="container nation-tab J-nation-tab" style="display:none">
+        <div class="row">
+          <div class="col-3" style="overflow-y: auto;max-height: 200px">
+            <div class="list-group J-nation-tablist" role="tablist">
+              {{nationTabList}}
+            </div>
+        </div>
+        <div class="col-9" style="overflow-y: auto;max-height: 200px">
+            <form class='J-nation-form'>
+                <div class="tab-content J-nation-tab-content">
+                  {{nationTabContent}}
+                </div>
+            </form>
+        </div>
+        </div>
+    </div>
+</div>
+</script>
+
+<script id="J-airline-temp2" type="text/x-template">
+  <div class="col-sm-12 air-table">
+    <div class="row">
+      <div class="col-sm-12 J-air-table-header">{{airHeader}}</div>
+
+    </div>
+    <div class="container inland-tab J-inland-tab" style="border: 1px solid #dee2e6;">
+      <div class="row">
+        <div class="col-3" style="overflow-y: auto;max-height: 200px">
+          <div class="list-group J-inland-tablist" role="tablist">{{inlandTabList}}</div>
+        </div>
+        <div class="col-9" style="overflow-y: auto;max-height: 200px">
+          <form class="J-inland-form">
+            <div class="tab-content J-inland-tab-content">
+              {{inlandTabContent}}
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="container nation-tab J-nation-tab" style="border: 1px solid #dee2e6;display:none">
+      <div class="row">
+        <div class="col-3" style="overflow-y: auto;max-height: 200px">
+          <div class="list-group J-nation-tablist" role="tablist">{{nationTabList}}</div>
+        </div>
+        <div class="col-9" style="overflow-y: auto;max-height: 200px">
+          <form class='J-nation-form'>
+            <div class="tab-content J-nation-tab-content">
+              {{nationTabContent}}
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</script>
+
+<script id="J-cabinSeat" type="text/x-template">
+  <div class="form-group row">
+    <div class="col-sm-12 form-inline">
+      <label class="col-form-label">
+        舱位等级
+      </label>
+      <select class="form-control" name="weighCabin" style="width:80px">
+        <option value="K">K</option>
+        <option value="Y">Y</option>
+      </select>
+      <label class="col-form-label">
+        舱以下的舱位，统一以
+      </label>
+      <input type="text" class="form-control" value="25" name="differDiscount" style="width:80px">
+      <label class="col-form-label">
+        折为基数与Y舱取差。
+      </label>
+    </div>
+  </div>
+</script>
+
+
+<script id="J-airlineTypeTemp" type="text/x-template">
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label ">航线类型</label>
+    <div class="col-sm-10">
+      <select class="form-control text-secondary" id="airlineType" name="airlineType" style="width: 200px; ">
+        <option value="0">国内航线</option>
+        <option value="1">国际航线</option>
+    </select>
+    </div>
+  </div>
+</script>
+
+<script id="J-detail-temp" type="text/x-template">
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label">参数ID</label>
+  <div class="col-sm-10 col-form-label">
+    <span class="span-label J-detail-paramId">{{id}}</span>
+  </div>
+</div>
+
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label">升舱类型</label>
+  <div class="col-sm-10 col-form-label">
+    <span class="span-label J-detail-upgfType">{{upgfTypeLabel}}</span>
+  </div>
+</div>
+
+<div class="form-group row">
+  {{airlineTypeTemp}}
+</div>
+
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label">航线信息</label>
+  {{airlineTemplate}}
+</div>
+
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label">{{seatLabel}}</label>
+  <div class="col-12">
+    <form class="J-seat-form">
+      <table class="seat-table J-detail-seat-table"></table>
+    </form>
+  </div>
+</div>
+
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label">价格信息</label>
+  <div class="col-12">
+    <table class="price-table J-detail-price-table"></table>
+  </div>
+</div>
+
+<div class="form-group row">
+  {{cabinSeatTemplate}}
+</div>
+<div class="form-group row">
+<label class="col-sm-2 col-form-label">参数名称</label>
+<div class="col-sm-5 col-form-label">
+  <span class="span-label J-detail-paramName">{{airlinePriceBaseSetName}}</span>
+</div>
+</div>
+</script>
+
+<script id="J-detail-airlineType-temp" type="text/x-template">
+  <label class="col-sm-2 col-form-label">航线类型</label>
+  <div class="col-sm-10 col-form-label">
+    <span class="span-label J-detail-airType">{{airlineTypeLabel}}</span>
+  </div>
+</script>
+
+<script id="J-detail-cabinSeat-temp" type="text/x-template">
+<div class="col-sm-12 form-inline">
+  <label class="col-form-label">
+    舱位等级 <span class="J-weighCabin">{{weighCabin}}</span>以下的舱位，统一以
+    <span class="J-differDiscount">{{differDiscount}}</span>折为基数与Y舱取差。
+  </label>
+</div>
+</script>
+
+<script id="J-detail-airTable-header" type="text/x-template">
+<div class="container">
+  <div class="row">
+    <div class="J-air-table-inland air-table-inland">
+        国内航线
+    </div>
+    <div class="J-air-table-nation air-table-nation">
+        国际/地区航线
+    </div>
+  </div>
+</div>
+</script>
+
+<script id="J-detail-airTable-temp" type="text/x-template">
+  <div class="col-sm-9">
+    {{headerTemp}}
+  <div class="container inland-tab J-inland-tab" >
+    <div class="row">
+      <div class="col-3" style="overflow-y: auto;max-height: 200px">
+        <div class="list-group J-inland-tablist" role="tablist">
+          {{inlandTabList}}
+        </div>
+      </div>
+      <div class="col-9" style="overflow-y: auto;max-height: 200px">
+          <div class="tab-content J-inland-tab-content">
+            {{inlandTabContent}}
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="container nation-tab J-nation-tab">
+    <div class="row">
+      <div class="col-3" style="overflow-y: auto;max-height: 200px">
+        <div class="list-group J-nation-tablist" role="tablist">
+          {{nationTabList}}
+        </div>
+      </div>
+      <div class="col-9" style="overflow-y: auto;max-height: 200px">
+            <div class="tab-content J-nation-tab-content">
+              {{nationTabContent}}
+            </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</script>
+
+<script id="J-detail-seat-temp">
+</script>

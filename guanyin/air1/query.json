@@ -1,0 +1,3206 @@
+{
+    "rows": [
+        {
+            "id": "114",
+            "airlinePriceBaseSetName": "CSX-SHA往返9元升舱航线",
+            "cabinType": {
+                "upgfType": "1",
+                "upCabinName": "登机口升舱"
+            },
+            "upgAirlineBaseSets": [
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "3f11ee3edba3450cb029a2a4d669450b",
+                    "airlinePriceBaseSetId": "114",
+                    "airlineName": "国内航线",
+                    "intFlag": "D",
+                    "classifyType": "distance",
+                    "airlineDesc": null,
+                    "classifyValue": "0-1000",
+                    "segments": "CSX-SHA,SHA-CSX",
+                    "createTime": "2020-03-04 15:06:37",
+                    "createUser": "208",
+                    "lastUpdateTime": "2020-03-04 15:06:37",
+                    "lastUpdateUser": "208",
+                    "countryName": null
+                }
+            ],
+            "planeSeatInfos": [
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "ae5e38954b6a4290891af180f92da3ed",
+                    "airlinePriceBaseSetId": "114",
+                    "planeTypeName": "A32A",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "3",
+                    "createTime": "2020-03-04 14:41:21",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "f0db416b66dc479c8f947b7f73a9b51c",
+                    "airlinePriceBaseSetId": "114",
+                    "planeTypeName": "A320",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "3",
+                    "createTime": "2020-03-04 14:41:21",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "af090b7e8a5f4d11bbc8b4387ed6709e",
+                    "airlinePriceBaseSetId": "114",
+                    "planeTypeName": "A321",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "3",
+                    "createTime": "2020-03-04 14:41:21",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "2b78aa5a8b984e0db7ac591218057880",
+                    "airlinePriceBaseSetId": "114",
+                    "planeTypeName": "B787-9",
+                    "businessClassSeatNum": "30",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-03-04 14:41:21",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "ec025d341c3c4167822e5eb1dd2b5888",
+                    "airlinePriceBaseSetId": "114",
+                    "planeTypeName": "A32N",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-03-04 14:41:21",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                }
+            ],
+            "priceInfos": [
+                {
+                    "currencyCode": "CNY",
+                    "currencyName": "人民币",
+                    "currencyUnit": "元",
+                    "basePrice": "9.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                },
+                {
+                    "currencyCode": "USD",
+                    "currencyName": "美元",
+                    "currencyUnit": "美元",
+                    "basePrice": "2.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                }
+            ],
+            "status": "T",
+            "weighCabin": null,
+            "differDiscount": null,
+            "feeDetails": []
+        },
+        {
+            "id": "107",
+            "airlinePriceBaseSetName": "国内测试2",
+            "cabinType": {
+                "upgfType": "3",
+                "upCabinName": "机上升舱"
+            },
+            "upgAirlineBaseSets": [
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "d916442322b54e79b78940f9f8396675",
+                    "airlinePriceBaseSetId": "107",
+                    "airlineName": "国内航线",
+                    "intFlag": "D",
+                    "classifyType": "distance",
+                    "airlineDesc": null,
+                    "classifyValue": "1000-1500",
+                    "segments": "LJG-BHY",
+                    "createTime": "2020-03-03 14:26:01",
+                    "createUser": "272",
+                    "lastUpdateTime": "2020-03-03 14:26:01",
+                    "lastUpdateUser": "272",
+                    "countryName": null
+                }
+            ],
+            "planeSeatInfos": [],
+            "priceInfos": [
+                {
+                    "currencyCode": "CNY",
+                    "currencyName": "人民币",
+                    "currencyUnit": "元",
+                    "basePrice": "0.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                },
+                {
+                    "currencyCode": "USD",
+                    "currencyName": "美元",
+                    "currencyUnit": "美元",
+                    "basePrice": "0.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                }
+            ],
+            "status": "T",
+            "weighCabin": "K",
+            "differDiscount": "25",
+            "feeDetails": [
+                {
+                    "feeInfoList": [
+                        {
+                            "passengerType": "ADT",
+                            "passengerTypeDesc": "成人",
+                            "currency": "CNY",
+                            "fee": 800
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "passengerTypeDesc": "儿童",
+                            "currency": "CNY",
+                            "fee": 0
+                        },
+                        {
+                            "passengerType": "INFANT",
+                            "passengerTypeDesc": "婴儿",
+                            "currency": "CNY",
+                            "fee": 0
+                        }
+                    ],
+                    "passengerType": null,
+                    "passengerTypeDesc": null,
+                    "currency": null,
+                    "fee": 0,
+                    "currencyCode": "CNY",
+                    "currencyName": "人民币",
+                    "currencyUnit": "元",
+                    "floorPrice": null,
+                    "highPrice": null
+                },
+                {
+                    "feeInfoList": [
+                        {
+                            "passengerType": "ADT",
+                            "passengerTypeDesc": "成人",
+                            "currency": "USD",
+                            "fee": 116
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "passengerTypeDesc": "儿童",
+                            "currency": "USD",
+                            "fee": 0
+                        },
+                        {
+                            "passengerType": "INFANT",
+                            "passengerTypeDesc": "婴儿",
+                            "currency": "USD",
+                            "fee": 0
+                        }
+                    ],
+                    "passengerType": null,
+                    "passengerTypeDesc": null,
+                    "currency": null,
+                    "fee": 0,
+                    "currencyCode": "USD",
+                    "currencyName": "美元",
+                    "currencyUnit": "美元",
+                    "floorPrice": null,
+                    "highPrice": null
+                }
+            ]
+        },
+        {
+            "id": "105",
+            "airlinePriceBaseSetName": "测试航线组1",
+            "cabinType": {
+                "upgfType": "3",
+                "upCabinName": "机上升舱"
+            },
+            "upgAirlineBaseSets": [
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "b6b51c0fa07e4b20b754722d93b6ec26",
+                    "airlinePriceBaseSetId": "105",
+                    "airlineName": "国内航线",
+                    "intFlag": "D",
+                    "classifyType": "distance",
+                    "airlineDesc": null,
+                    "classifyValue": "1000-1500",
+                    "segments": "CAN-SHA",
+                    "createTime": "2020-03-03 12:55:02",
+                    "createUser": "272",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null,
+                    "countryName": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "a1f719c082584991b815f059e9f1f15b",
+                    "airlinePriceBaseSetId": "105",
+                    "airlineName": "国内航线",
+                    "intFlag": "D",
+                    "classifyType": "distance",
+                    "airlineDesc": null,
+                    "classifyValue": "0-1000",
+                    "segments": "BAV-UCB",
+                    "createTime": "2020-03-03 12:55:02",
+                    "createUser": "272",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null,
+                    "countryName": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "5237aeb6ebb74b26b07d56c32d831028",
+                    "airlinePriceBaseSetId": "105",
+                    "airlineName": "国内航线",
+                    "intFlag": "D",
+                    "classifyType": "distance",
+                    "airlineDesc": null,
+                    "classifyValue": "1500-2000",
+                    "segments": "CGQ-NKG,NKG-CGQ",
+                    "createTime": "2020-03-03 12:55:02",
+                    "createUser": "272",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null,
+                    "countryName": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "ce233d0486194d6e8b1613af1926359a",
+                    "airlinePriceBaseSetId": "105",
+                    "airlineName": "国内航线",
+                    "intFlag": "D",
+                    "classifyType": "distance",
+                    "airlineDesc": null,
+                    "classifyValue": "2000-99999",
+                    "segments": "BHY-HRB",
+                    "createTime": "2020-03-03 12:55:02",
+                    "createUser": "272",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null,
+                    "countryName": null
+                }
+            ],
+            "planeSeatInfos": [],
+            "priceInfos": [
+                {
+                    "currencyCode": "CNY",
+                    "currencyName": "人民币",
+                    "currencyUnit": "元",
+                    "basePrice": "0.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                },
+                {
+                    "currencyCode": "USD",
+                    "currencyName": "美元",
+                    "currencyUnit": "美元",
+                    "basePrice": "0.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                }
+            ],
+            "status": "T",
+            "weighCabin": "K",
+            "differDiscount": "25",
+            "feeDetails": [
+                {
+                    "feeInfoList": [
+                        {
+                            "passengerType": "ADT",
+                            "passengerTypeDesc": "成人",
+                            "currency": "CNY",
+                            "fee": 800
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "passengerTypeDesc": "儿童",
+                            "currency": "CNY",
+                            "fee": 600
+                        },
+                        {
+                            "passengerType": "INFANT",
+                            "passengerTypeDesc": "婴儿",
+                            "currency": "CNY",
+                            "fee": 0
+                        }
+                    ],
+                    "passengerType": null,
+                    "passengerTypeDesc": null,
+                    "currency": null,
+                    "fee": 0,
+                    "currencyCode": "CNY",
+                    "currencyName": "人民币",
+                    "currencyUnit": "元",
+                    "floorPrice": null,
+                    "highPrice": null
+                },
+                {
+                    "feeInfoList": [
+                        {
+                            "passengerType": "ADT",
+                            "passengerTypeDesc": "成人",
+                            "currency": "USD",
+                            "fee": 116
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "passengerTypeDesc": "儿童",
+                            "currency": "USD",
+                            "fee": 87
+                        },
+                        {
+                            "passengerType": "INFANT",
+                            "passengerTypeDesc": "婴儿",
+                            "currency": "USD",
+                            "fee": 0
+                        }
+                    ],
+                    "passengerType": null,
+                    "passengerTypeDesc": null,
+                    "currency": null,
+                    "fee": 0,
+                    "currencyCode": "USD",
+                    "currencyName": "美元",
+                    "currencyUnit": "美元",
+                    "floorPrice": null,
+                    "highPrice": null
+                }
+            ]
+        },
+        {
+            "id": "104",
+            "airlinePriceBaseSetName": "机上升舱1000KM以下的U舱55折",
+            "cabinType": {
+                "upgfType": "3",
+                "upCabinName": "机上升舱"
+            },
+            "upgAirlineBaseSets": [
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "785ce0bb154c4c0a8beca100da10a79c",
+                    "airlinePriceBaseSetId": "104",
+                    "airlineName": "国内航线",
+                    "intFlag": "D",
+                    "classifyType": "distance",
+                    "airlineDesc": null,
+                    "classifyValue": "0-1000",
+                    "segments": "UCB-BAV,BFJ-KMG,KMG-BFJ,BHY-SZX,SZX-BHY,CGO-SHA,SHA-CGO,CKG-DYG,DYG-CKG,CSX-KWE,KWE-CSX,CSX-SHA,SHA-CSX,CSX-WMT,WMT-CSX,CSX-WNZ,WNZ-CSX,DLC-NBS,NBS-DLC,DLC-NKG,NKG-DLC,DLC-YNJ,YNJ-DLC,DYG-HUZ,HUZ-DYG,DYG-KMG,KMG-DYG,DYG-NKG,NKG-DYG,FOC-SHA,SHA-FOC,GYU-XIY,XIY-GYU,HGH-TAO,TAO-HGH,HLD-SHE,SHE-HLD,HLD-TGO,TGO-HLD,HUZ-KWE,KWE-HUZ,HUZ-WUH,WUH-HUZ,INC-UYN,UYN-INC,JIC-LHW,LHW-JIC,JUH-SHA,SHA-JUH,KHN-NKG,NKG-KHN,KHN-SHA,SHA-KHN,KWE-LJG,LJG-KWE,LCX-SHA,SHA-LCX,LHW-YZY,YZY-LHW,NKG-TAO,TAO-NKG,NKG-TYN,TYN-NKG,NKG-WEH,WEH-NKG,NKG-WNZ,WNZ-NKG,NKG-XMN,XMN-NKG,NKG-YNZ,YNZ-NKG,SHA-SQJ,SQJ-SHA,SHA-TAO,TAO-SHA,SHA-WUH,WUH-SHA,SHA-XMN,XMN-SHA,SQJ-SZX,SZX-SQJ,TAO-WUX,WUX-TAO,WMT-XIY,XIY-WMT,XIY-XNN,XNN-XIY,XIY-ZHY,ZHY-XIY",
+                    "createTime": "2020-03-02 20:13:23",
+                    "createUser": "208",
+                    "lastUpdateTime": "2020-03-02 20:13:23",
+                    "lastUpdateUser": "208",
+                    "countryName": null
+                }
+            ],
+            "planeSeatInfos": [],
+            "priceInfos": [
+                {
+                    "currencyCode": "CNY",
+                    "currencyName": "人民币",
+                    "currencyUnit": "元",
+                    "basePrice": "0.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                },
+                {
+                    "currencyCode": "USD",
+                    "currencyName": "美元",
+                    "currencyUnit": "美元",
+                    "basePrice": "0.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                }
+            ],
+            "status": "T",
+            "weighCabin": "U",
+            "differDiscount": "55",
+            "feeDetails": [
+                {
+                    "feeInfoList": [
+                        {
+                            "passengerType": "ADT",
+                            "passengerTypeDesc": "成人",
+                            "currency": "CNY",
+                            "fee": 500
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "passengerTypeDesc": "儿童",
+                            "currency": "CNY",
+                            "fee": 400
+                        },
+                        {
+                            "passengerType": "INFANT",
+                            "passengerTypeDesc": "婴儿",
+                            "currency": "CNY",
+                            "fee": 400
+                        }
+                    ],
+                    "passengerType": null,
+                    "passengerTypeDesc": null,
+                    "currency": null,
+                    "fee": 0,
+                    "currencyCode": "CNY",
+                    "currencyName": "人民币",
+                    "currencyUnit": "元",
+                    "floorPrice": null,
+                    "highPrice": null
+                },
+                {
+                    "feeInfoList": [
+                        {
+                            "passengerType": "ADT",
+                            "passengerTypeDesc": "成人",
+                            "currency": "USD",
+                            "fee": 73
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "passengerTypeDesc": "儿童",
+                            "currency": "USD",
+                            "fee": 58
+                        },
+                        {
+                            "passengerType": "INFANT",
+                            "passengerTypeDesc": "婴儿",
+                            "currency": "USD",
+                            "fee": 58
+                        }
+                    ],
+                    "passengerType": null,
+                    "passengerTypeDesc": null,
+                    "currency": null,
+                    "fee": 0,
+                    "currencyCode": "USD",
+                    "currencyName": "美元",
+                    "currencyUnit": "美元",
+                    "floorPrice": null,
+                    "highPrice": null
+                }
+            ]
+        },
+        {
+            "id": "103",
+            "airlinePriceBaseSetName": "登机口升舱港澳台专线",
+            "cabinType": {
+                "upgfType": "1",
+                "upCabinName": "登机口升舱"
+            },
+            "upgAirlineBaseSets": [
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "a81c5d14e8434cc3be1921054f4bf34b",
+                    "airlinePriceBaseSetId": "103",
+                    "airlineName": "国际/地区航线",
+                    "intFlag": "I",
+                    "classifyType": "area",
+                    "airlineDesc": null,
+                    "classifyValue": "MO,HK,TW",
+                    "segments": "CEB-HKG,CEB-KHH,CEB-MFM,CEB-TPE,CGO-HKG,HKG-CGO,CGO-KHH,KHH-CGO,CGO-MFM,MFM-CGO,CGO-TPE,TPE-CGO,CGQ-HKG,HKG-CGQ,CGQ-KHH,KHH-CGQ,CGQ-MFM,MFM-CGQ,CGQ-TPE,TPE-CGQ,CIH-HKG,HKG-CIH,CIH-KHH,KHH-CIH,CIH-MFM,MFM-CIH,CIH-TPE,TPE-CIH,CKG-HKG,HKG-CKG,CKG-KHH,KHH-CKG,CKG-MFM,MFM-CKG,CKG-TPE,TPE-CKG,CSX-HKG,HKG-CSX,CSX-KHH,KHH-CSX,CSX-MFM,MFM-CSX,CSX-TPE,TPE-CSX,CTU-HKG,HKG-CTU,CTU-KHH,KHH-CTU,CTU-MFM,MFM-CTU,CTU-TPE,TPE-CTU,DLC-HKG,HKG-DLC,DLC-KHH,KHH-DLC,DLC-MFM,MFM-DLC,DLC-TPE,TPE-DLC,DOY-HKG,HKG-DOY,DOY-KHH,KHH-DOY,DOY-MFM,MFM-DOY,DOY-TPE,TPE-DOY,DYG-HKG,HKG-DYG,DYG-KHH,KHH-DYG,DYG-MFM,MFM-DYG,DYG-TPE,TPE-DYG,FOC-HKG,HKG-FOC,FOC-KHH,KHH-FOC,FOC-MFM,MFM-FOC,FOC-TPE,TPE-FOC,HAK-HKG,HKG-HAK,HAK-KHH,KHH-HAK,HAK-MFM,MFM-HAK,HAK-TPE,TPE-HAK,HKG-HLD,HLD-HKG,HKG-HRB,HRB-HKG,HKG-HUZ,HUZ-HKG,HKG-HZG,HZG-HKG,HKG-INC,INC-HKG,HKG-KMG,KMG-HKG,HKG-KWE,KWE-HKG,HKG-KWL,KWL-HKG,HKG-LCX,LCX-HKG,HKG-LFQ,LFQ-HKG,HKG-LHW,LHW-HKG,HKG-MIG,MIG-HKG,HKG-SHA,SHA-HKG,HKG-SHE,SHE-HKG,HKG-SQJ,SQJ-HKG,HKG-SYX,SYX-HKG,HKG-TAO,TAO-HKG,HKG-TEN,TEN-HKG,HKG-TGO,TGO-HKG,HKG-TSN,TSN-HKG,HKG-URC,URC-HKG,HKG-WUH,WUH-HKG,HKG-XFN,XFN-HKG,HKG-XIY,XIY-HKG,HKG-XMN,XMN-HKG,HKG-XNN,XNN-HKG,HKG-YYA,YYA-HKG,HLD-KHH,KHH-HLD,HLD-MFM,MFM-HLD,HLD-TPE,TPE-HLD,HRB-KHH,KHH-HRB,HRB-MFM,MFM-HRB,HRB-TPE,TPE-HRB,HUZ-KHH,KHH-HUZ,HUZ-MFM,MFM-HUZ,HUZ-TPE,TPE-HUZ,HZG-KHH,KHH-HZG,HZG-MFM,MFM-HZG,HZG-TPE,TPE-HZG,INC-KHH,KHH-INC,INC-MFM,MFM-INC,INC-TPE,TPE-INC,KHH-KMG,KMG-KHH,KHH-KWE,KWE-KHH,KHH-KWL,KWL-KHH,KHH-LCX,LCX-KHH,KHH-LFQ,LFQ-KHH,KHH-LHW,LHW-KHH,KHH-MIG,MIG-KHH,KHH-SHA,SHA-KHH,KHH-SHE,SHE-KHH,KHH-SQJ,SQJ-KHH,KHH-SYX,SYX-KHH,KHH-TAO,TAO-KHH,KHH-TEN,TEN-KHH,KHH-TGO,TGO-KHH,KHH-TSN,TSN-KHH,KHH-URC,URC-KHH,KHH-WUH,WUH-KHH,KHH-XFN,XFN-KHH,KHH-XIY,XIY-KHH,KHH-XMN,XMN-KHH,KHH-XNN,XNN-KHH,KHH-YYA,YYA-KHH,KMG-MFM,MFM-KMG,KMG-TPE,TPE-KMG,KWE-MFM,MFM-KWE,KWE-TPE,TPE-KWE,KWL-MFM,MFM-KWL,KWL-TPE,TPE-KWL,LCX-MFM,MFM-LCX,LCX-TPE,TPE-LCX,LFQ-MFM,MFM-LFQ,LFQ-TPE,TPE-LFQ,LHW-MFM,MFM-LHW,LHW-TPE,TPE-LHW,MFM-MIG,MIG-MFM,MFM-SHA,SHA-MFM,MFM-SHE,SHE-MFM,MFM-SQJ,SQJ-MFM,MFM-SYX,SYX-MFM,MFM-TAO,TAO-MFM,MFM-TEN,TEN-MFM,MFM-TGO,TGO-MFM,MFM-TSN,TSN-MFM,MFM-URC,URC-MFM,MFM-WUH,WUH-MFM,MFM-XFN,XFN-MFM,MFM-XIY,XIY-MFM,MFM-XMN,XMN-MFM,MFM-XNN,XNN-MFM,MFM-YYA,YYA-MFM,MIG-TPE,TPE-MIG,SHA-TPE,TPE-SHA,SHE-TPE,TPE-SHE,SQJ-TPE,TPE-SQJ,SYX-TPE,TPE-SYX,TAO-TPE,TPE-TAO,TEN-TPE,TPE-TEN,TGO-TPE,TPE-TGO,TPE-TSN,TSN-TPE,TPE-URC,URC-TPE,TPE-WUH,WUH-TPE,TPE-XFN,XFN-TPE,TPE-XIY,XIY-TPE,TPE-XMN,XMN-TPE,TPE-XNN,XNN-TPE,TPE-YYA,YYA-TPE",
+                    "createTime": "2020-03-02 15:33:48",
+                    "createUser": "208",
+                    "lastUpdateTime": "2020-03-02 15:33:48",
+                    "lastUpdateUser": "208",
+                    "countryName": null
+                }
+            ],
+            "planeSeatInfos": [
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "0a45a654efe940cda515d33c09dd33d7",
+                    "airlinePriceBaseSetId": "103",
+                    "planeTypeName": "A32A",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-03-02 15:33:33",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "548e6d8b007c4c37bdbcd9178390c2fa",
+                    "airlinePriceBaseSetId": "103",
+                    "planeTypeName": "A320",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-03-02 15:33:33",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "fe6b19be74bb4e1ca51e0ac4063f1a64",
+                    "airlinePriceBaseSetId": "103",
+                    "planeTypeName": "A321",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-03-02 15:33:33",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "4f8461b282bd4c1ca21228b2d3b9acc3",
+                    "airlinePriceBaseSetId": "103",
+                    "planeTypeName": "B787-9",
+                    "businessClassSeatNum": "30",
+                    "holdBackBusinessNum": "5",
+                    "createTime": "2020-03-02 15:33:33",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "71168c454fa440c2b1e4a3776cabc3fd",
+                    "airlinePriceBaseSetId": "103",
+                    "planeTypeName": "A32N",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-03-02 15:33:33",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                }
+            ],
+            "priceInfos": [
+                {
+                    "currencyCode": "CNY",
+                    "currencyName": "人民币",
+                    "currencyUnit": "元",
+                    "basePrice": "1000.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                },
+                {
+                    "currencyCode": "USD",
+                    "currencyName": "美元",
+                    "currencyUnit": "美元",
+                    "basePrice": "145.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                }
+            ],
+            "status": "T",
+            "weighCabin": null,
+            "differDiscount": null,
+            "feeDetails": []
+        },
+        {
+            "id": "102",
+            "airlinePriceBaseSetName": "登机口升舱1000KM以下的国内航段",
+            "cabinType": {
+                "upgfType": "1",
+                "upCabinName": "登机口升舱"
+            },
+            "upgAirlineBaseSets": [
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "594d1f437be64d1ba6368bf4c87124d8",
+                    "airlinePriceBaseSetId": "102",
+                    "airlineName": "国内航线",
+                    "intFlag": "D",
+                    "classifyType": "distance",
+                    "airlineDesc": null,
+                    "classifyValue": "0-1000",
+                    "segments": "BAV-UCB,UCB-BAV,BFJ-KMG,KMG-BFJ,BHY-SZX,SZX-BHY,CGO-SHA,SHA-CGO,CKG-DYG,DYG-CKG,CSX-KWE,KWE-CSX,CSX-SHA,SHA-CSX,CSX-WMT,WMT-CSX,CSX-WNZ,WNZ-CSX,DLC-NBS,NBS-DLC,DLC-NKG,NKG-DLC,DLC-YNJ,YNJ-DLC,DYG-HUZ,HUZ-DYG,DYG-KMG,KMG-DYG,DYG-NKG,NKG-DYG,FOC-SHA,SHA-FOC,GYU-XIY,XIY-GYU,HGH-TAO,TAO-HGH,HLD-SHE,SHE-HLD,HLD-TGO,TGO-HLD,HUZ-KWE,KWE-HUZ,HUZ-WUH,WUH-HUZ,INC-UYN,UYN-INC,JIC-LHW,LHW-JIC,JUH-SHA,SHA-JUH,KHN-NKG,NKG-KHN,KHN-SHA,SHA-KHN,KWE-LJG,LJG-KWE,LCX-SHA,SHA-LCX,LHW-YZY,YZY-LHW,NKG-TAO,TAO-NKG,NKG-TYN,TYN-NKG,NKG-WEH,WEH-NKG,NKG-WNZ,WNZ-NKG,NKG-XMN,XMN-NKG,NKG-YNZ,YNZ-NKG,SHA-SQJ,SQJ-SHA,SHA-TAO,TAO-SHA,SHA-WUH,WUH-SHA,SHA-XMN,XMN-SHA,SQJ-SZX,SZX-SQJ,TAO-WUX,WUX-TAO,WMT-XIY,XIY-WMT,XIY-XNN,XNN-XIY,XIY-ZHY,ZHY-XIY",
+                    "createTime": "2020-03-02 15:32:57",
+                    "createUser": "208",
+                    "lastUpdateTime": "2020-03-02 15:32:57",
+                    "lastUpdateUser": "208",
+                    "countryName": null
+                }
+            ],
+            "planeSeatInfos": [
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "ff3513efbb624787a34fd60d80a18605",
+                    "airlinePriceBaseSetId": "102",
+                    "planeTypeName": "A32A",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-03-02 15:31:49",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "6a3b57da295f44fe9c44e1f0f2190a70",
+                    "airlinePriceBaseSetId": "102",
+                    "planeTypeName": "A320",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-03-02 15:31:49",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "ababf9453bbd4501a11964928d09b284",
+                    "airlinePriceBaseSetId": "102",
+                    "planeTypeName": "A321",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-03-02 15:31:49",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "57bf8dd413e04fa6b90903b9746d2cce",
+                    "airlinePriceBaseSetId": "102",
+                    "planeTypeName": "B787-9",
+                    "businessClassSeatNum": "30",
+                    "holdBackBusinessNum": "4",
+                    "createTime": "2020-03-02 15:31:49",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "04030d98e87e4a53a7dd96b99591610c",
+                    "airlinePriceBaseSetId": "102",
+                    "planeTypeName": "A32N",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-03-02 15:31:49",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                }
+            ],
+            "priceInfos": [
+                {
+                    "currencyCode": "CNY",
+                    "currencyName": "人民币",
+                    "currencyUnit": "元",
+                    "basePrice": "1000.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                },
+                {
+                    "currencyCode": "USD",
+                    "currencyName": "美元",
+                    "currencyUnit": "美元",
+                    "basePrice": "145.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                }
+            ],
+            "status": "T",
+            "weighCabin": null,
+            "differDiscount": null,
+            "feeDetails": []
+        },
+        {
+            "id": "99",
+            "airlinePriceBaseSetName": "机上升舱1000KM88折",
+            "cabinType": {
+                "upgfType": "3",
+                "upCabinName": "机上升舱"
+            },
+            "upgAirlineBaseSets": [
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "b37bae0ac1374c7abddf76899879eaa3",
+                    "airlinePriceBaseSetId": "99",
+                    "airlineName": "国内航线",
+                    "intFlag": "D",
+                    "classifyType": "distance",
+                    "airlineDesc": null,
+                    "classifyValue": "0-1000",
+                    "segments": "BAV-UCB,UCB-BAV,BFJ-KMG,KMG-BFJ,BHY-SZX,SZX-BHY,CGO-SHA,SHA-CGO,CKG-DYG,DYG-CKG,CSX-KWE,KWE-CSX,CSX-SHA,SHA-CSX,CSX-WMT,WMT-CSX,CSX-WNZ,WNZ-CSX,DLC-NBS,NBS-DLC,DLC-NKG,NKG-DLC,DLC-YNJ,YNJ-DLC,DYG-HUZ,HUZ-DYG,DYG-KMG,KMG-DYG,DYG-NKG,NKG-DYG,FOC-SHA,SHA-FOC,GYU-XIY,XIY-GYU,HGH-TAO,TAO-HGH,HLD-SHE,SHE-HLD,HLD-TGO,TGO-HLD,HUZ-KWE,KWE-HUZ,HUZ-WUH,WUH-HUZ,INC-UYN,UYN-INC,JIC-LHW,LHW-JIC,JUH-SHA,SHA-JUH,KHN-NKG,NKG-KHN,KHN-SHA,SHA-KHN,KWE-LJG,LJG-KWE,LCX-SHA,SHA-LCX,LHW-YZY,YZY-LHW,NKG-TAO,TAO-NKG,NKG-TYN,TYN-NKG,NKG-WEH,WEH-NKG,NKG-WNZ,WNZ-NKG,NKG-XMN,XMN-NKG,NKG-YNZ,YNZ-NKG,SHA-SQJ,SQJ-SHA,SHA-TAO,TAO-SHA,SHA-WUH,WUH-SHA,SHA-XMN,XMN-SHA,SQJ-SZX,SZX-SQJ,TAO-WUX,WUX-TAO,WMT-XIY,XIY-WMT,XIY-XNN,XNN-XIY,XIY-ZHY,ZHY-XIY",
+                    "createTime": "2020-03-02 11:14:37",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null,
+                    "countryName": null
+                }
+            ],
+            "planeSeatInfos": [],
+            "priceInfos": [
+                {
+                    "currencyCode": "CNY",
+                    "currencyName": "人民币",
+                    "currencyUnit": "元",
+                    "basePrice": "0.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                },
+                {
+                    "currencyCode": "USD",
+                    "currencyName": "美元",
+                    "currencyUnit": "美元",
+                    "basePrice": "0.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                }
+            ],
+            "status": "T",
+            "weighCabin": "V",
+            "differDiscount": "88",
+            "feeDetails": [
+                {
+                    "feeInfoList": [
+                        {
+                            "passengerType": "ADT",
+                            "passengerTypeDesc": "成人",
+                            "currency": "CNY",
+                            "fee": 1000
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "passengerTypeDesc": "儿童",
+                            "currency": "CNY",
+                            "fee": 510
+                        },
+                        {
+                            "passengerType": "INFANT",
+                            "passengerTypeDesc": "婴儿",
+                            "currency": "CNY",
+                            "fee": 542
+                        }
+                    ],
+                    "passengerType": null,
+                    "passengerTypeDesc": null,
+                    "currency": null,
+                    "fee": 0,
+                    "currencyCode": "CNY",
+                    "currencyName": "人民币",
+                    "currencyUnit": "元",
+                    "floorPrice": null,
+                    "highPrice": null
+                },
+                {
+                    "feeInfoList": [
+                        {
+                            "passengerType": "ADT",
+                            "passengerTypeDesc": "成人",
+                            "currency": "USD",
+                            "fee": 145
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "passengerTypeDesc": "儿童",
+                            "currency": "USD",
+                            "fee": 74
+                        },
+                        {
+                            "passengerType": "INFANT",
+                            "passengerTypeDesc": "婴儿",
+                            "currency": "USD",
+                            "fee": 79
+                        }
+                    ],
+                    "passengerType": null,
+                    "passengerTypeDesc": null,
+                    "currency": null,
+                    "fee": 0,
+                    "currencyCode": "USD",
+                    "currencyName": "美元",
+                    "currencyUnit": "美元",
+                    "floorPrice": null,
+                    "highPrice": null
+                }
+            ]
+        },
+        {
+            "id": "96",
+            "airlinePriceBaseSetName": "机上升舱上海到长沙往返55折",
+            "cabinType": {
+                "upgfType": "3",
+                "upCabinName": "机上升舱"
+            },
+            "upgAirlineBaseSets": [
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "1b82ed7639bf4692981510413ab942bd",
+                    "airlinePriceBaseSetId": "96",
+                    "airlineName": "国内航线",
+                    "intFlag": "D",
+                    "classifyType": "distance",
+                    "airlineDesc": null,
+                    "classifyValue": "0-1000",
+                    "segments": "CSX-SHA,SHA-CSX",
+                    "createTime": "2020-03-02 10:54:57",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null,
+                    "countryName": null
+                }
+            ],
+            "planeSeatInfos": [],
+            "priceInfos": [
+                {
+                    "currencyCode": "CNY",
+                    "currencyName": "人民币",
+                    "currencyUnit": "元",
+                    "basePrice": "0.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                },
+                {
+                    "currencyCode": "USD",
+                    "currencyName": "美元",
+                    "currencyUnit": "美元",
+                    "basePrice": "0.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                }
+            ],
+            "status": "T",
+            "weighCabin": "E",
+            "differDiscount": "55",
+            "feeDetails": [
+                {
+                    "feeInfoList": [
+                        {
+                            "passengerType": "ADT",
+                            "passengerTypeDesc": "成人",
+                            "currency": "CNY",
+                            "fee": 0
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "passengerTypeDesc": "儿童",
+                            "currency": "CNY",
+                            "fee": 0
+                        },
+                        {
+                            "passengerType": "INFANT",
+                            "passengerTypeDesc": "婴儿",
+                            "currency": "CNY",
+                            "fee": 0
+                        }
+                    ],
+                    "passengerType": null,
+                    "passengerTypeDesc": null,
+                    "currency": null,
+                    "fee": 0,
+                    "currencyCode": "CNY",
+                    "currencyName": "人民币",
+                    "currencyUnit": "元",
+                    "floorPrice": null,
+                    "highPrice": null
+                },
+                {
+                    "feeInfoList": [
+                        {
+                            "passengerType": "ADT",
+                            "passengerTypeDesc": "成人",
+                            "currency": "USD",
+                            "fee": 0
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "passengerTypeDesc": "儿童",
+                            "currency": "USD",
+                            "fee": 0
+                        },
+                        {
+                            "passengerType": "INFANT",
+                            "passengerTypeDesc": "婴儿",
+                            "currency": "USD",
+                            "fee": 0
+                        }
+                    ],
+                    "passengerType": null,
+                    "passengerTypeDesc": null,
+                    "currency": null,
+                    "fee": 0,
+                    "currencyCode": "USD",
+                    "currencyName": "美元",
+                    "currencyUnit": "美元",
+                    "floorPrice": null,
+                    "highPrice": null
+                }
+            ]
+        },
+        {
+            "id": "95",
+            "airlinePriceBaseSetName": "机上升舱小于1000KM所有航线",
+            "cabinType": {
+                "upgfType": "3",
+                "upCabinName": "机上升舱"
+            },
+            "upgAirlineBaseSets": [
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "aa684751e4de4e2c94bd148625f29a44",
+                    "airlinePriceBaseSetId": "95",
+                    "airlineName": "国内航线",
+                    "intFlag": "D",
+                    "classifyType": "distance",
+                    "airlineDesc": null,
+                    "classifyValue": "0-1000",
+                    "segments": "BAV-UCB,UCB-BAV,BFJ-KMG,KMG-BFJ,BHY-SZX,SZX-BHY,CGO-SHA,SHA-CGO,CKG-DYG,DYG-CKG,CSX-KWE,KWE-CSX,CSX-SHA,SHA-CSX,CSX-WMT,WMT-CSX,CSX-WNZ,WNZ-CSX,DLC-NBS,NBS-DLC,DLC-NKG,NKG-DLC,DLC-YNJ,YNJ-DLC,DYG-HUZ,HUZ-DYG,DYG-KMG,KMG-DYG,DYG-NKG,NKG-DYG,FOC-SHA,SHA-FOC,GYU-XIY,XIY-GYU,HGH-TAO,TAO-HGH,HLD-SHE,SHE-HLD,HLD-TGO,TGO-HLD,HUZ-KWE,KWE-HUZ,HUZ-WUH,WUH-HUZ,INC-UYN,UYN-INC,JIC-LHW,LHW-JIC,JUH-SHA,SHA-JUH,KHN-NKG,NKG-KHN,KHN-SHA,SHA-KHN,KWE-LJG,LJG-KWE,LCX-SHA,SHA-LCX,LHW-YZY,YZY-LHW,NKG-TAO,TAO-NKG,NKG-TYN,TYN-NKG,NKG-WEH,WEH-NKG,NKG-WNZ,WNZ-NKG,NKG-XMN,XMN-NKG,NKG-YNZ,YNZ-NKG,SHA-SQJ,SQJ-SHA,SHA-TAO,TAO-SHA,SHA-WUH,WUH-SHA,SHA-XMN,XMN-SHA,SQJ-SZX,SZX-SQJ,TAO-WUX,WUX-TAO,WMT-XIY,XIY-WMT,XIY-XNN,XNN-XIY,XIY-ZHY,ZHY-XIY",
+                    "createTime": "2020-03-02 10:52:42",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null,
+                    "countryName": null
+                }
+            ],
+            "planeSeatInfos": [],
+            "priceInfos": [
+                {
+                    "currencyCode": "CNY",
+                    "currencyName": "人民币",
+                    "currencyUnit": "元",
+                    "basePrice": "0.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                },
+                {
+                    "currencyCode": "USD",
+                    "currencyName": "美元",
+                    "currencyUnit": "美元",
+                    "basePrice": "0.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                }
+            ],
+            "status": "T",
+            "weighCabin": "Y",
+            "differDiscount": "25",
+            "feeDetails": [
+                {
+                    "feeInfoList": [
+                        {
+                            "passengerType": "ADT",
+                            "passengerTypeDesc": "成人",
+                            "currency": "CNY",
+                            "fee": 0
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "passengerTypeDesc": "儿童",
+                            "currency": "CNY",
+                            "fee": 0
+                        },
+                        {
+                            "passengerType": "INFANT",
+                            "passengerTypeDesc": "婴儿",
+                            "currency": "CNY",
+                            "fee": 0
+                        }
+                    ],
+                    "passengerType": null,
+                    "passengerTypeDesc": null,
+                    "currency": null,
+                    "fee": 0,
+                    "currencyCode": "CNY",
+                    "currencyName": "人民币",
+                    "currencyUnit": "元",
+                    "floorPrice": null,
+                    "highPrice": null
+                },
+                {
+                    "feeInfoList": [
+                        {
+                            "passengerType": "ADT",
+                            "passengerTypeDesc": "成人",
+                            "currency": "USD",
+                            "fee": 0
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "passengerTypeDesc": "儿童",
+                            "currency": "USD",
+                            "fee": 0
+                        },
+                        {
+                            "passengerType": "INFANT",
+                            "passengerTypeDesc": "婴儿",
+                            "currency": "USD",
+                            "fee": 0
+                        }
+                    ],
+                    "passengerType": null,
+                    "passengerTypeDesc": null,
+                    "currency": null,
+                    "fee": 0,
+                    "currencyCode": "USD",
+                    "currencyName": "美元",
+                    "currencyUnit": "美元",
+                    "floorPrice": null,
+                    "highPrice": null
+                }
+            ]
+        },
+        {
+            "id": "94",
+            "airlinePriceBaseSetName": "机上升舱小于1000KM所有航线",
+            "cabinType": {
+                "upgfType": "3",
+                "upCabinName": "机上升舱"
+            },
+            "upgAirlineBaseSets": [
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "24ce48e992604d14976378bb695ca0ae",
+                    "airlinePriceBaseSetId": "94",
+                    "airlineName": "国内航线",
+                    "intFlag": "D",
+                    "classifyType": "distance",
+                    "airlineDesc": null,
+                    "classifyValue": "0-1000",
+                    "segments": "BAV-UCB,UCB-BAV,BFJ-KMG,KMG-BFJ,BHY-SZX,SZX-BHY,CGO-SHA,SHA-CGO,CKG-DYG,DYG-CKG,CSX-KWE,KWE-CSX,CSX-SHA,SHA-CSX,CSX-WMT,WMT-CSX,CSX-WNZ,WNZ-CSX,DLC-NBS,NBS-DLC,DLC-NKG,NKG-DLC,DLC-YNJ,YNJ-DLC,DYG-HUZ,HUZ-DYG,DYG-KMG,KMG-DYG,DYG-NKG,NKG-DYG,FOC-SHA,SHA-FOC,GYU-XIY,XIY-GYU,HGH-TAO,TAO-HGH,HLD-SHE,SHE-HLD,HLD-TGO,TGO-HLD,HUZ-KWE,KWE-HUZ,HUZ-WUH,WUH-HUZ,INC-UYN,UYN-INC,JIC-LHW,LHW-JIC,JUH-SHA,SHA-JUH,KHN-NKG,NKG-KHN,KHN-SHA,SHA-KHN,KWE-LJG,LJG-KWE,LCX-SHA,SHA-LCX,LHW-YZY,YZY-LHW,NKG-TAO,TAO-NKG,NKG-TYN,TYN-NKG,NKG-WEH,WEH-NKG,NKG-WNZ,WNZ-NKG,NKG-XMN,XMN-NKG,NKG-YNZ,YNZ-NKG,SHA-SQJ,SQJ-SHA,SHA-TAO,TAO-SHA,SHA-WUH,WUH-SHA,SHA-XMN,XMN-SHA,SQJ-SZX,SZX-SQJ,TAO-WUX,WUX-TAO,WMT-XIY,XIY-WMT,XIY-XNN,XNN-XIY,XIY-ZHY,ZHY-XIY",
+                    "createTime": "2020-03-02 10:52:42",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null,
+                    "countryName": null
+                }
+            ],
+            "planeSeatInfos": [],
+            "priceInfos": [
+                {
+                    "currencyCode": "CNY",
+                    "currencyName": "人民币",
+                    "currencyUnit": "元",
+                    "basePrice": "0.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                },
+                {
+                    "currencyCode": "USD",
+                    "currencyName": "美元",
+                    "currencyUnit": "美元",
+                    "basePrice": "0.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                }
+            ],
+            "status": "T",
+            "weighCabin": "Y",
+            "differDiscount": "25",
+            "feeDetails": [
+                {
+                    "feeInfoList": [
+                        {
+                            "passengerType": "ADT",
+                            "passengerTypeDesc": "成人",
+                            "currency": "CNY",
+                            "fee": 0
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "passengerTypeDesc": "儿童",
+                            "currency": "CNY",
+                            "fee": 0
+                        },
+                        {
+                            "passengerType": "INFANT",
+                            "passengerTypeDesc": "婴儿",
+                            "currency": "CNY",
+                            "fee": 0
+                        }
+                    ],
+                    "passengerType": null,
+                    "passengerTypeDesc": null,
+                    "currency": null,
+                    "fee": 0,
+                    "currencyCode": "CNY",
+                    "currencyName": "人民币",
+                    "currencyUnit": "元",
+                    "floorPrice": null,
+                    "highPrice": null
+                },
+                {
+                    "feeInfoList": [
+                        {
+                            "passengerType": "ADT",
+                            "passengerTypeDesc": "成人",
+                            "currency": "USD",
+                            "fee": 0
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "passengerTypeDesc": "儿童",
+                            "currency": "USD",
+                            "fee": 0
+                        },
+                        {
+                            "passengerType": "INFANT",
+                            "passengerTypeDesc": "婴儿",
+                            "currency": "USD",
+                            "fee": 0
+                        }
+                    ],
+                    "passengerType": null,
+                    "passengerTypeDesc": null,
+                    "currency": null,
+                    "fee": 0,
+                    "currencyCode": "USD",
+                    "currencyName": "美元",
+                    "currencyUnit": "美元",
+                    "floorPrice": null,
+                    "highPrice": null
+                }
+            ]
+        },
+        {
+            "id": "77",
+            "airlinePriceBaseSetName": "登机口测试1",
+            "cabinType": {
+                "upgfType": "1",
+                "upCabinName": "登机口升舱"
+            },
+            "upgAirlineBaseSets": [
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "367f6563d80e4fac8379dd365a7d6e47",
+                    "airlinePriceBaseSetId": "77",
+                    "airlineName": "国内航线",
+                    "intFlag": "D",
+                    "classifyType": "distance",
+                    "airlineDesc": null,
+                    "classifyValue": "0-1000",
+                    "segments": "BAV-UCB,UCB-BAV,BFJ-KMG,KMG-BFJ,BHY-SZX,SZX-BHY,CGO-SHA,SHA-CGO,CKG-DYG,DYG-CKG,CSX-KWE,KWE-CSX,CSX-SHA,SHA-CSX,CSX-WMT,WMT-CSX,CSX-WNZ,WNZ-CSX,DLC-NBS,NBS-DLC,DLC-NKG,NKG-DLC,DLC-YNJ,YNJ-DLC,DYG-HUZ,HUZ-DYG,DYG-KMG,KMG-DYG,DYG-NKG,NKG-DYG,FOC-SHA,SHA-FOC,GYU-XIY,XIY-GYU,HGH-TAO,TAO-HGH,HLD-SHE,SHE-HLD,HLD-TGO,TGO-HLD,HUZ-KWE,KWE-HUZ,HUZ-WUH,WUH-HUZ,INC-UYN,UYN-INC,JIC-LHW,LHW-JIC,JUH-SHA,SHA-JUH,KHN-NKG,NKG-KHN,KHN-SHA,SHA-KHN,KWE-LJG,LJG-KWE,LCX-SHA,SHA-LCX,LHW-YZY,YZY-LHW,NKG-TAO,TAO-NKG,NKG-TYN,TYN-NKG,NKG-WEH,WEH-NKG,NKG-WNZ,WNZ-NKG,NKG-XMN,XMN-NKG,NKG-YNZ,YNZ-NKG,SHA-SQJ,SQJ-SHA,SHA-TAO,TAO-SHA,SHA-WUH,WUH-SHA,SHA-XMN,XMN-SHA,SQJ-SZX,SZX-SQJ,TAO-WUX,WUX-TAO,WMT-XIY,XIY-WMT,XIY-XNN,XNN-XIY,XIY-ZHY,ZHY-XIY",
+                    "createTime": "2020-02-28 10:50:04",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null,
+                    "countryName": null
+                }
+            ],
+            "planeSeatInfos": [
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "84f940b4df5b4f519d5052c59b772b7a",
+                    "airlinePriceBaseSetId": "77",
+                    "planeTypeName": "A32A",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-02-28 10:50:04",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "5f7d0438bf5740619bd8dfff9fc20481",
+                    "airlinePriceBaseSetId": "77",
+                    "planeTypeName": "A320",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-02-28 10:50:04",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "9731b3b7c9aa4d88a88fa7dc8a3c14df",
+                    "airlinePriceBaseSetId": "77",
+                    "planeTypeName": "A321",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-02-28 10:50:04",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "22a44f62d9ac4efea4d6bf19f69d1ef4",
+                    "airlinePriceBaseSetId": "77",
+                    "planeTypeName": "B787-9",
+                    "businessClassSeatNum": "30",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-02-28 10:50:04",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "8b5d3463383740c2b82be5a05fde5828",
+                    "airlinePriceBaseSetId": "77",
+                    "planeTypeName": "A32N",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-02-28 10:50:04",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                }
+            ],
+            "priceInfos": [
+                {
+                    "currencyCode": "CNY",
+                    "currencyName": "人民币",
+                    "currencyUnit": "元",
+                    "basePrice": "30.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                },
+                {
+                    "currencyCode": "USD",
+                    "currencyName": "美元",
+                    "currencyUnit": "美元",
+                    "basePrice": "5.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                }
+            ],
+            "status": "T",
+            "weighCabin": null,
+            "differDiscount": null,
+            "feeDetails": []
+        },
+        {
+            "id": "76",
+            "airlinePriceBaseSetName": "上海到大阪",
+            "cabinType": {
+                "upgfType": "1",
+                "upCabinName": "登机口升舱"
+            },
+            "upgAirlineBaseSets": [
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "55f4cbee59374eb8b1feb7024944060c",
+                    "airlinePriceBaseSetId": "76",
+                    "airlineName": "国际/地区航线",
+                    "intFlag": "I",
+                    "classifyType": "area",
+                    "airlineDesc": null,
+                    "classifyValue": "JP",
+                    "segments": "SHA-OSA",
+                    "createTime": "2020-02-24 19:31:56",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null,
+                    "countryName": null
+                }
+            ],
+            "planeSeatInfos": [
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "d8af08c8f1024c9390c69ab845e41884",
+                    "airlinePriceBaseSetId": "76",
+                    "planeTypeName": "A32A",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-02-24 19:31:56",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "60d1c106f3e447a0bf36f2c1dc332248",
+                    "airlinePriceBaseSetId": "76",
+                    "planeTypeName": "A320",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-02-24 19:31:56",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "59a8b7021ab145b0bb26092b203ffbfc",
+                    "airlinePriceBaseSetId": "76",
+                    "planeTypeName": "A321",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-02-24 19:31:56",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "aa8ac28193494141a432b36a6d5179ba",
+                    "airlinePriceBaseSetId": "76",
+                    "planeTypeName": "B787-9",
+                    "businessClassSeatNum": "30",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-02-24 19:31:56",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "f0e1114e2329453685fc80f853bc0389",
+                    "airlinePriceBaseSetId": "76",
+                    "planeTypeName": "A32N",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-02-24 19:31:56",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                }
+            ],
+            "priceInfos": [
+                {
+                    "currencyCode": "CNY",
+                    "currencyName": "人民币",
+                    "currencyUnit": "元",
+                    "basePrice": "10.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                },
+                {
+                    "currencyCode": "USD",
+                    "currencyName": "美元",
+                    "currencyUnit": "美元",
+                    "basePrice": "2.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                }
+            ],
+            "status": "T",
+            "weighCabin": null,
+            "differDiscount": null,
+            "feeDetails": []
+        },
+        {
+            "id": "58",
+            "airlinePriceBaseSetName": "上海到日本中部国际机场",
+            "cabinType": {
+                "upgfType": "1",
+                "upCabinName": "登机口升舱"
+            },
+            "upgAirlineBaseSets": [
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "16e85bd337b940fb92eff5056a71e413",
+                    "airlinePriceBaseSetId": "58",
+                    "airlineName": "国际/地区航线",
+                    "intFlag": "I",
+                    "classifyType": "area",
+                    "airlineDesc": null,
+                    "classifyValue": "JP",
+                    "segments": "SHA-NGO",
+                    "createTime": "2020-02-20 10:59:51",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null,
+                    "countryName": null
+                }
+            ],
+            "planeSeatInfos": [
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "77c8825ad93f4c14b7605bb5e73f1850",
+                    "airlinePriceBaseSetId": "58",
+                    "planeTypeName": "A32A",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-02-20 10:59:51",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "80504af9ecc944cfaf5fb3ecae7dc3f2",
+                    "airlinePriceBaseSetId": "58",
+                    "planeTypeName": "A320",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-02-20 10:59:51",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "3ae238a31b974598920ae77ac75f4b91",
+                    "airlinePriceBaseSetId": "58",
+                    "planeTypeName": "A321",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-02-20 10:59:51",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "123d2c3609ff441cabb3b59585be1a12",
+                    "airlinePriceBaseSetId": "58",
+                    "planeTypeName": "B787-9",
+                    "businessClassSeatNum": "30",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-02-20 10:59:51",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "9f1d0aee6be14e698ada3da019dee2f8",
+                    "airlinePriceBaseSetId": "58",
+                    "planeTypeName": "A32N",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-02-20 10:59:51",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                }
+            ],
+            "priceInfos": [
+                {
+                    "currencyCode": "CNY",
+                    "currencyName": "人民币",
+                    "currencyUnit": "元",
+                    "basePrice": "20.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                },
+                {
+                    "currencyCode": "USD",
+                    "currencyName": "美元",
+                    "currencyUnit": "美元",
+                    "basePrice": "3.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                }
+            ],
+            "status": "T",
+            "weighCabin": null,
+            "differDiscount": null,
+            "feeDetails": []
+        },
+        {
+            "id": "57",
+            "airlinePriceBaseSetName": "上海到新千岁专线",
+            "cabinType": {
+                "upgfType": "1",
+                "upCabinName": "登机口升舱"
+            },
+            "upgAirlineBaseSets": [
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "90932d4b3cb344789aec24cf4ab69cf4",
+                    "airlinePriceBaseSetId": "57",
+                    "airlineName": "国际/地区航线",
+                    "intFlag": "I",
+                    "classifyType": "area",
+                    "airlineDesc": null,
+                    "classifyValue": "JP",
+                    "segments": "SHA-SPK",
+                    "createTime": "2020-02-19 13:16:04",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null,
+                    "countryName": null
+                }
+            ],
+            "planeSeatInfos": [
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "80a6618b497a4e8c9fe50dd0cd1fe5b2",
+                    "airlinePriceBaseSetId": "57",
+                    "planeTypeName": "A32A",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-02-19 13:16:04",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "b7c21e9ab6624e4da3d30b7d8973c655",
+                    "airlinePriceBaseSetId": "57",
+                    "planeTypeName": "A320",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-02-19 13:16:04",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "e3375da5ee104d0c9e73bd820487758c",
+                    "airlinePriceBaseSetId": "57",
+                    "planeTypeName": "A321",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-02-19 13:16:04",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "8711fed3a12e422393e85cd0ab9341ba",
+                    "airlinePriceBaseSetId": "57",
+                    "planeTypeName": "B787-9",
+                    "businessClassSeatNum": "30",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-02-19 13:16:04",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "b6c034ca8cdd4725970e533ca4548a8b",
+                    "airlinePriceBaseSetId": "57",
+                    "planeTypeName": "A32N",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-02-19 13:16:04",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                }
+            ],
+            "priceInfos": [
+                {
+                    "currencyCode": "CNY",
+                    "currencyName": "人民币",
+                    "currencyUnit": "元",
+                    "basePrice": "20.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                },
+                {
+                    "currencyCode": "USD",
+                    "currencyName": "美元",
+                    "currencyUnit": "美元",
+                    "basePrice": "3.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                }
+            ],
+            "status": "T",
+            "weighCabin": null,
+            "differDiscount": null,
+            "feeDetails": []
+        },
+        {
+            "id": "56",
+            "airlinePriceBaseSetName": "哈尔滨浦东往返",
+            "cabinType": {
+                "upgfType": "1",
+                "upCabinName": "登机口升舱"
+            },
+            "upgAirlineBaseSets": [
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "7973e01b5ade4931a13d0bf1b9263403",
+                    "airlinePriceBaseSetId": "56",
+                    "airlineName": "国内航线",
+                    "intFlag": "D",
+                    "classifyType": "distance",
+                    "airlineDesc": null,
+                    "classifyValue": "1500-2000",
+                    "segments": "HRB-SHA,SHA-HRB",
+                    "createTime": "2020-02-19 10:53:48",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null,
+                    "countryName": null
+                }
+            ],
+            "planeSeatInfos": [
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "b3b9977eef1341e89222e5d3a409e1c9",
+                    "airlinePriceBaseSetId": "56",
+                    "planeTypeName": "A32A",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-02-19 10:53:48",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "003568a222964407869069ea3ef8020f",
+                    "airlinePriceBaseSetId": "56",
+                    "planeTypeName": "A320",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-02-19 10:53:48",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "26681ef751cf44f2ad2c9d67e999aae9",
+                    "airlinePriceBaseSetId": "56",
+                    "planeTypeName": "A321",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-02-19 10:53:48",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "a43c70d2f71f469d8fd1882ef71e4b21",
+                    "airlinePriceBaseSetId": "56",
+                    "planeTypeName": "B787-9",
+                    "businessClassSeatNum": "30",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-02-19 10:53:48",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "080fec3630d94407aaeba07ed66abd74",
+                    "airlinePriceBaseSetId": "56",
+                    "planeTypeName": "A32N",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-02-19 10:53:48",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                }
+            ],
+            "priceInfos": [
+                {
+                    "currencyCode": "CNY",
+                    "currencyName": "人民币",
+                    "currencyUnit": "元",
+                    "basePrice": "20.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                },
+                {
+                    "currencyCode": "USD",
+                    "currencyName": "美元",
+                    "currencyUnit": "美元",
+                    "basePrice": "3.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                }
+            ],
+            "status": "T",
+            "weighCabin": null,
+            "differDiscount": null,
+            "feeDetails": []
+        },
+        {
+            "id": "55",
+            "airlinePriceBaseSetName": "湖南到上海往返",
+            "cabinType": {
+                "upgfType": "1",
+                "upCabinName": "登机口升舱"
+            },
+            "upgAirlineBaseSets": [
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "fa4571c9137a40a491c02846afa05fee",
+                    "airlinePriceBaseSetId": "55",
+                    "airlineName": "国内航线",
+                    "intFlag": "D",
+                    "classifyType": "distance",
+                    "airlineDesc": null,
+                    "classifyValue": "0-1000",
+                    "segments": "CSX-SHA,SHA-CSX",
+                    "createTime": "2020-02-17 19:03:06",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null,
+                    "countryName": null
+                }
+            ],
+            "planeSeatInfos": [
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "c28465bd58004e9789fe74df667de008",
+                    "airlinePriceBaseSetId": "55",
+                    "planeTypeName": "A32A",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-02-17 19:03:06",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "90c13e4507224903a74fa37f6aa157da",
+                    "airlinePriceBaseSetId": "55",
+                    "planeTypeName": "A320",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-02-17 19:03:06",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "63733705141c4071a0a0561d27e6c6ba",
+                    "airlinePriceBaseSetId": "55",
+                    "planeTypeName": "A321",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-02-17 19:03:06",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "ff95998839504be294daa781fc73c2d1",
+                    "airlinePriceBaseSetId": "55",
+                    "planeTypeName": "B787-9",
+                    "businessClassSeatNum": "30",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-02-17 19:03:06",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "16a18846c8f543679b14ea36e41343be",
+                    "airlinePriceBaseSetId": "55",
+                    "planeTypeName": "A32N",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-02-17 19:03:06",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                }
+            ],
+            "priceInfos": [
+                {
+                    "currencyCode": "CNY",
+                    "currencyName": "人民币",
+                    "currencyUnit": "元",
+                    "basePrice": "20.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                },
+                {
+                    "currencyCode": "USD",
+                    "currencyName": "美元",
+                    "currencyUnit": "美元",
+                    "basePrice": "3.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                }
+            ],
+            "status": "T",
+            "weighCabin": null,
+            "differDiscount": null,
+            "feeDetails": []
+        },
+        {
+            "id": "52",
+            "airlinePriceBaseSetName": "春节热门航线价格调整",
+            "cabinType": {
+                "upgfType": "1",
+                "upCabinName": "登机口升舱"
+            },
+            "upgAirlineBaseSets": [
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "32a15b6c999f44c2885a9a035847bb06",
+                    "airlinePriceBaseSetId": "52",
+                    "airlineName": "国内航线",
+                    "intFlag": "D",
+                    "classifyType": "distance",
+                    "airlineDesc": null,
+                    "classifyValue": "0-1000",
+                    "segments": "SHA-CSX",
+                    "createTime": "2020-01-21 11:24:02",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null,
+                    "countryName": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "3c945356600f440ea507a7ce09a76ab9",
+                    "airlinePriceBaseSetId": "52",
+                    "airlineName": "国内航线",
+                    "intFlag": "D",
+                    "classifyType": "distance",
+                    "airlineDesc": null,
+                    "classifyValue": "1000-1500",
+                    "segments": "SHA-CAN,SHA-XIY,SHA-ZUH",
+                    "createTime": "2020-01-21 11:24:02",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null,
+                    "countryName": null
+                }
+            ],
+            "planeSeatInfos": [
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "5279f27bf0a740dab8ef9ed47804807d",
+                    "airlinePriceBaseSetId": "52",
+                    "planeTypeName": "A32A",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "1",
+                    "createTime": "2020-01-21 11:24:02",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "308ba7bc88ed452ba827d263a6a8f824",
+                    "airlinePriceBaseSetId": "52",
+                    "planeTypeName": "A320",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "1",
+                    "createTime": "2020-01-21 11:24:02",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "74eed730730f420794782064addad056",
+                    "airlinePriceBaseSetId": "52",
+                    "planeTypeName": "A321",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "1",
+                    "createTime": "2020-01-21 11:24:02",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "608323b06d3f4ae8ab650968f1392d7c",
+                    "airlinePriceBaseSetId": "52",
+                    "planeTypeName": "B787-9",
+                    "businessClassSeatNum": "30",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2020-01-21 11:24:02",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                }
+            ],
+            "priceInfos": [
+                {
+                    "currencyCode": "CNY",
+                    "currencyName": "人民币",
+                    "currencyUnit": "元",
+                    "basePrice": "999.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                },
+                {
+                    "currencyCode": "USD",
+                    "currencyName": "美元",
+                    "currencyUnit": "美元",
+                    "basePrice": "145.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                }
+            ],
+            "status": "T",
+            "weighCabin": null,
+            "differDiscount": null,
+            "feeDetails": []
+        },
+        {
+            "id": "42",
+            "airlinePriceBaseSetName": "上海到深圳基础配置",
+            "cabinType": {
+                "upgfType": "1",
+                "upCabinName": "登机口升舱"
+            },
+            "upgAirlineBaseSets": [
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "9cf597b916984852af59c5376ea81771",
+                    "airlinePriceBaseSetId": "42",
+                    "airlineName": "国内航线",
+                    "intFlag": "D",
+                    "classifyType": "distance",
+                    "airlineDesc": null,
+                    "classifyValue": "1000-1500",
+                    "segments": "SHA-SZX",
+                    "createTime": "2019-09-03 10:07:08",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null,
+                    "countryName": null
+                }
+            ],
+            "planeSeatInfos": [
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "0cb84d4f7548448abb0b874808bec1d0",
+                    "airlinePriceBaseSetId": "42",
+                    "planeTypeName": "A32A",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2019-09-03 10:07:24",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "7dc3372d86fb4194a466eaf1da3cf65d",
+                    "airlinePriceBaseSetId": "42",
+                    "planeTypeName": "A320",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "2",
+                    "createTime": "2019-09-03 10:07:24",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "58b26a2834814366b7144a64980d3b66",
+                    "airlinePriceBaseSetId": "42",
+                    "planeTypeName": "A321",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "4",
+                    "createTime": "2019-09-03 10:07:24",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "eada13631af74f87a54c1f1d8aae6288",
+                    "airlinePriceBaseSetId": "42",
+                    "planeTypeName": "B787-9",
+                    "businessClassSeatNum": "30",
+                    "holdBackBusinessNum": "0",
+                    "createTime": "2019-09-03 10:07:24",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                }
+            ],
+            "priceInfos": [
+                {
+                    "currencyCode": "CNY",
+                    "currencyName": "人民币",
+                    "currencyUnit": "元",
+                    "basePrice": "787.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                },
+                {
+                    "currencyCode": "USD",
+                    "currencyName": "美元",
+                    "currencyUnit": "美元",
+                    "basePrice": "115.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                }
+            ],
+            "status": "T",
+            "weighCabin": null,
+            "differDiscount": null,
+            "feeDetails": []
+        },
+        {
+            "id": "47",
+            "airlinePriceBaseSetName": "上海到三亚升舱基础设置",
+            "cabinType": {
+                "upgfType": "1",
+                "upCabinName": "登机口升舱"
+            },
+            "upgAirlineBaseSets": [
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "f651fe2264f64e8fb5ec654063ae6d8f",
+                    "airlinePriceBaseSetId": "47",
+                    "airlineName": "国内航线",
+                    "intFlag": "D",
+                    "classifyType": "distance",
+                    "airlineDesc": null,
+                    "classifyValue": "2000-99999",
+                    "segments": "SHA-SYX",
+                    "createTime": "2019-09-03 13:17:27",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null,
+                    "countryName": null
+                }
+            ],
+            "planeSeatInfos": [
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "0f58a6ce35d84f1e9b4787a3dfc5b75e",
+                    "airlinePriceBaseSetId": "47",
+                    "planeTypeName": "A32A",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "0",
+                    "createTime": "2019-09-03 13:17:27",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "3736fe71c6ca4a0ab1e29905c5dbb49d",
+                    "airlinePriceBaseSetId": "47",
+                    "planeTypeName": "A320",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "0",
+                    "createTime": "2019-09-03 13:17:27",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "b0ca9ae703304324846b916dee41e6f4",
+                    "airlinePriceBaseSetId": "47",
+                    "planeTypeName": "A321",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "0",
+                    "createTime": "2019-09-03 13:17:27",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "de2e3701822b411491d2e4cfc7424ebc",
+                    "airlinePriceBaseSetId": "47",
+                    "planeTypeName": "B787-9",
+                    "businessClassSeatNum": "30",
+                    "holdBackBusinessNum": "5",
+                    "createTime": "2019-09-03 13:17:27",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                }
+            ],
+            "priceInfos": [
+                {
+                    "currencyCode": "CNY",
+                    "currencyName": "人民币",
+                    "currencyUnit": "元",
+                    "basePrice": "998.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                },
+                {
+                    "currencyCode": "USD",
+                    "currencyName": "美元",
+                    "currencyUnit": "美元",
+                    "basePrice": "145.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                }
+            ],
+            "status": "T",
+            "weighCabin": null,
+            "differDiscount": null,
+            "feeDetails": []
+        },
+        {
+            "id": "53",
+            "airlinePriceBaseSetName": "上海到深圳机上升舱基础配置",
+            "cabinType": {
+                "upgfType": "3",
+                "upCabinName": "机上升舱"
+            },
+            "upgAirlineBaseSets": [
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "EEE16BE5B5704BC783B47AA5543864B0",
+                    "airlinePriceBaseSetId": "53",
+                    "airlineName": "国内航线",
+                    "intFlag": "D",
+                    "classifyType": "distance",
+                    "airlineDesc": null,
+                    "classifyValue": "1000-1500",
+                    "segments": "SHA-SZX",
+                    "createTime": "2019-08-14 16:32:44",
+                    "createUser": "208",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null,
+                    "countryName": null
+                }
+            ],
+            "planeSeatInfos": [],
+            "priceInfos": [
+                {
+                    "currencyCode": "CNY",
+                    "currencyName": "人民币",
+                    "currencyUnit": "元",
+                    "basePrice": "0.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                },
+                {
+                    "currencyCode": "USD",
+                    "currencyName": "美元",
+                    "currencyUnit": "美元",
+                    "basePrice": "0.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                }
+            ],
+            "status": "T",
+            "weighCabin": "K",
+            "differDiscount": "25",
+            "feeDetails": [
+                {
+                    "feeInfoList": [
+                        {
+                            "passengerType": "ADT",
+                            "passengerTypeDesc": "成人",
+                            "currency": "CNY",
+                            "fee": 201
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "passengerTypeDesc": "儿童",
+                            "currency": "CNY",
+                            "fee": 101
+                        },
+                        {
+                            "passengerType": "INFANT",
+                            "passengerTypeDesc": "婴儿",
+                            "currency": "CNY",
+                            "fee": 50
+                        }
+                    ],
+                    "passengerType": null,
+                    "passengerTypeDesc": null,
+                    "currency": null,
+                    "fee": 0,
+                    "currencyCode": "CNY",
+                    "currencyName": "人民币",
+                    "currencyUnit": "元",
+                    "floorPrice": null,
+                    "highPrice": null
+                },
+                {
+                    "feeInfoList": [
+                        {
+                            "passengerType": "ADT",
+                            "passengerTypeDesc": "成人",
+                            "currency": "USD",
+                            "fee": 30
+                        },
+                        {
+                            "passengerType": "CHD",
+                            "passengerTypeDesc": "儿童",
+                            "currency": "USD",
+                            "fee": 15
+                        },
+                        {
+                            "passengerType": "INFANT",
+                            "passengerTypeDesc": "婴儿",
+                            "currency": "USD",
+                            "fee": 8
+                        }
+                    ],
+                    "passengerType": null,
+                    "passengerTypeDesc": null,
+                    "currency": null,
+                    "fee": 0,
+                    "currencyCode": "USD",
+                    "currencyName": "美元",
+                    "currencyUnit": "美元",
+                    "floorPrice": null,
+                    "highPrice": null
+                }
+            ]
+        },
+        {
+            "id": "51",
+            "airlinePriceBaseSetName": "pek",
+            "cabinType": {
+                "upgfType": "1",
+                "upCabinName": "登机口升舱"
+            },
+            "upgAirlineBaseSets": [
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "294c518716c94a72b280a5f8d5e10ac7",
+                    "airlinePriceBaseSetId": "51",
+                    "airlineName": "国内航线",
+                    "intFlag": "D",
+                    "classifyType": "distance",
+                    "airlineDesc": null,
+                    "classifyValue": "1000-1500",
+                    "segments": "PEK-SHA,SHA-PEK",
+                    "createTime": "2019-09-04 13:09:21",
+                    "createUser": "62",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null,
+                    "countryName": null
+                }
+            ],
+            "planeSeatInfos": [
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "b5b94f4815334337a15d7b07f797c0a3",
+                    "airlinePriceBaseSetId": "51",
+                    "planeTypeName": "A32A",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "6",
+                    "createTime": "2019-09-04 13:09:21",
+                    "createUser": "62",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "0a087a22abc54dcabdb4bd36c15567bf",
+                    "airlinePriceBaseSetId": "51",
+                    "planeTypeName": "A320",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "6",
+                    "createTime": "2019-09-04 13:09:21",
+                    "createUser": "62",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "c79c5b64a26d4a0f9980cb8ff86f39d4",
+                    "airlinePriceBaseSetId": "51",
+                    "planeTypeName": "A321",
+                    "businessClassSeatNum": "8",
+                    "holdBackBusinessNum": "6",
+                    "createTime": "2019-09-04 13:09:21",
+                    "createUser": "62",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                },
+                {
+                    "page": 1,
+                    "count": 2147483647,
+                    "orderBy": null,
+                    "pageBounds": {
+                        "offset": 0,
+                        "limit": 2147483647,
+                        "page": 1,
+                        "orders": [],
+                        "containsTotalCount": true,
+                        "asyncTotalCount": null
+                    },
+                    "id": "8e385b5b380349108cb0e353e38022c0",
+                    "airlinePriceBaseSetId": "51",
+                    "planeTypeName": "B787-9",
+                    "businessClassSeatNum": "30",
+                    "holdBackBusinessNum": "4",
+                    "createTime": "2019-09-04 13:09:21",
+                    "createUser": "62",
+                    "lastUpdateTime": null,
+                    "lastUpdateUser": null
+                }
+            ],
+            "priceInfos": [
+                {
+                    "currencyCode": "CNY",
+                    "currencyName": "人民币",
+                    "currencyUnit": "元",
+                    "basePrice": "100.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                },
+                {
+                    "currencyCode": "USD",
+                    "currencyName": "美元",
+                    "currencyUnit": "美元",
+                    "basePrice": "15.00",
+                    "floorPrice": null,
+                    "highPrice": null
+                }
+            ],
+            "status": "T",
+            "weighCabin": null,
+            "differDiscount": null,
+            "feeDetails": []
+        }
+    ]
+}

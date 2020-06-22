@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    <label> <input type="checkbox" name="sameDirection"> same direction</label>
+  </div>
+  <canvas id="can" width="600" height="400"></canvas>
+</body>
+<script>
+  const canvas = document.getElementById('can')
+  const context = canvas.getContext('2d')
+  const checkbox = document.querySelector('[name=sameDirection]')
+  let sameDirection = checkbox.checked
+
+  context.fillStyle = 'rgba(100, 140, 230, 0.5)'
+  context.strokeStyle = context.fillStyle
+
+  context.shadowColor = 'rgba(0,0,0,0.8)'
+  context.shadowOffsetX = 10
+  context.shadowOffsetY = 10
+  context.shadowBlur = 15
+
+  function drawCircle(bool) {
+    console.log('sameDirection: ', bool)
+    context.clearRect(0, 0, canvas.width, canvas.height)
+    setTimeout(() => {
+      context.beginPath()
+      context.arc(300, 200, 150, 0, Math.PI * 2, false)
+      context.arc(300, 200, 100, 0, Math.PI * 2, !bool)
+      context.fill()
+      context.stroke()
+    }, 1000)
+  }
+
+  function drawInnerAnnotations(sameDirection) {
+    context.save()
+    context.beginPath()
+    context.moveTo(300, 200)
+    context.lineTo(100, 200)
+    context.stroke()
+  }
+
+  function drawAnnotations(sameDirection) {
+    context.strokeStyle = 'blue'
+    drawInnerAnnotations(sameDirection)
+  }
+
+  drawCircle(sameDirection)
+  checkbox.onclick = function (e) {
+    drawCircle(checkbox.checked)
+  }
+
+</script>
+
+</html>

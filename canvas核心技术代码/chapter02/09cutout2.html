@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <canvas id="can" width="800" height="800"></canvas>
+</body>
+<script>
+  const canvas = document.getElementById('can')
+  const context = canvas.getContext('2d')
+
+  function rect(x, y, width, height, clockwise = true) {
+    if (clockwise) {
+      // context.rect(x,y,width,height)
+      context.moveTo(x, y)
+      context.lineTo(x + width, y)
+      context.lineTo(x + width, y + height)
+      context.lineTo(x, y + height)
+      context.closePath()
+    } else {
+      context.moveTo(x, y)
+      context.lineTo(x, y + height)
+      context.lineTo(x + width, y + height)
+      context.lineTo(x + width, y)
+      context.closePath()
+    }
+  }
+
+  function drawCutRect() {
+    rect(600, 100, 100, 50, false)
+  }
+
+  function drawCutCircle() {
+    // context.beginPath()
+    context.arc(600, 300, 80, 0, Math.PI * 2, true)
+  }
+
+  function drawCutTriangle() {
+    context.moveTo(200, 200)
+    context.lineTo(200, 350)
+    context.lineTo(400, 350)
+    context.closePath()
+  }
+
+  function draw() {
+    context.clearRect(0, 0, canvas.width, canvas.height)
+
+    context.beginPath()
+    context.rect(10, 10, canvas.width-100, canvas.height-100)
+    context.stroke()
+
+    context.beginPath()
+    //NOTE: circle 要放在最前面绘制
+    drawCutCircle()
+    drawCutRect()
+    drawCutTriangle()
+    context.stroke()
+
+    context.fillStyle = 'rgba(100, 140, 230, 0.5)'
+    context.fill()
+    
+
+  }
+
+  draw()
+
+
+</script>
+
+</html>

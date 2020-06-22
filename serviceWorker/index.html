@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <div style="max-width: 700px; margin: 0 auto 0 auto;">
+      <button id="swinstall">Install Service Worker</button>
+      <button id="swuninstall">Uninstall Service Worker</button>
+      <div
+        id="js-log"
+        style="height: 400px; overflow: scroll; color: white; background: black; font-family: monospace; line-height: 150%; font-size: 12px; padding: 7px;"
+      ></div>
+      <a href="http://mattandre.ws">mattandre.ws</a>
+      <a href="http://twitter.com/andrewsmatt">@andrewsmatt</a>
+    </div>
+    <script>
+      window.addEventListener("message", function() {
+        debugger;
+      });
+
+      function log() {
+        var el = document.createElement("div");
+        el.innerHTML = Array.prototype.join.call(arguments, "<br />");
+        document.getElementById("js-log").appendChild(el);
+      }
+
+      var swRegistration = null;
+
+      if (navigator.serviceWorker) {
+        log("Browser supports Service Worker");
+        if (navigator.serviceWorker.current) {
+          log("Current Service Worker state: \\o/");
+          log(
+            "Go to chrome://serviceworker-internals/ to see Service Worker debug output"
+          );
+        } else {
+          log("No Service Worker active...");
+        }
+
+        // document.getElementById('swinstall').addEventListener('click', );
+
+        document
+          .getElementById("swuninstall")
+          .addEventListener("click", function() {
+            log("About to try to uninstall a Service Worker");
+            swRegistration.unregister().then(
+              function() {
+                log("Successfully uninstalled ServiceWorker");
+              },
+              function(why) {
+                log("Failed to uninstall" + why);
+              }
+            );
+          });
+      } else {
+        log(
+          "Browser does not support Service Worker, are you using Chrome Canary?  Is the Service Worker flag switched on? chrome://flags/#enable-service-worker"
+        );
+      }
+      !(function() {
+        log("About to try to install a Service Worker");
+        var swRegistration;
+        navigator.serviceWorker
+          .register("./worker.js", { scope: "serviceworker-simple" })
+          .then(registration => {
+            swRegistration = registration
+            swRegistration.update();
+            console.log("register success");
+            swRegistration.onupdatefound = () => {
+            console.log("更新 fonund");
+              const installingWorker = registration.installing;
+              installingWorker.onstatechange = () => {
+                if (installingWorker.state === "installed") {
+                  if (navigator.serviceWorker.controller) {
+                    console.log("New content is available; please refresh.");
+                  } else {
+                    console.log("Content is cached for offline use.");
+                  }
+                }
+              };
+            };
+          });
+          
+        // .then(
+        //   function(serviceWorker) {
+        //     // swRegistration = serviceWorker;
+        //     console.log("更新 fonund");
+        //     serviceWorker.onupdatefound(() => {
+        //       let registeration = swRegistration.installing;
+        //       registeration.onstatechange(() => {
+        //         if (registeration.state === "installed") {
+        //           console.log("更新成功", navigator.serviceWorker.controller);
+        //         }
+        //       });
+        //     });
+
+        //   },
+        //   function(why) {
+        //     log("Failed to install:" + why);
+        //   }
+        // );
+      })();
+    </script>
+  </body>
+</html>

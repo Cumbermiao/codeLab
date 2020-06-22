@@ -1,0 +1,47 @@
+{
+  "name": "vuessr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "cross-env NODE_ENV=server webpack --mode production --hide modules",
+    "gulp": "gulp",
+    "client": "cross-env NODE_ENV=client webpack --mode development --hide modules",
+    "vue": "cross-env NODE_ENV=vue webpack --mode development"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/plugin-proposal-decorators": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "css-loader": "^1.0.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-copy": "^4.0.1",
+    "gulp-watch": "^5.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "koa-router": "^7.4.0",
+    "ts-loader": "^5.3.0",
+    "vue-loader": "^15.4.2",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.5.17",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-merge": "^4.1.4"
+  },
+  "dependencies": {
+    "awilix": "^4.0.0",
+    "awilix-koa": "^3.0.0",
+    "cross-env": "^5.2.0",
+    "koa": "^2.6.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-static": "^5.0.0",
+    "vue": "^2.5.17",
+    "vue-router": "^3.0.2",
+    "vue-server-renderer": "^2.5.17"
+  }
+}

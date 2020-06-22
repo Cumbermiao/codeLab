@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+        .test{
+        font-size: 20px;
+        line-height: 4;
+    }
+    .box{
+        height: 100px;
+        width: 100px;
+        padding:10px;
+        border:1px;
+    }
+    .email-box{
+        position: relative;
+    }
+    .email-suffix{
+        margin: 0;
+        position: absolute;
+        display: none;
+        padding: 10px 0;
+        background: #fff;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        left: 0;
+        top:2px;
+    }
+    .email-suffix-item{
+        list-style: none;
+        padding:0 6px;
+        line-height: 1.2;
+        /* font-size: 14px; */
+    }
+    </style>
+    </head>
+
+    <body>
+        <a href="http://www.baidu.com">baidu</a>
+        <div class="box"></div>
+        <div class="email-box">
+            <input type="text" name="" id="name">
+            <ul class="email-suffix"></ul>
+        </div>
+        <div id="app">
+            {{name}}
+            <input type="text" v-model='name'>
+        </div>
+    </body>
+    <!-- <script src="../libs/jquery.js"></script>
+    <script src="../libs/vconsole.min.js"></script> -->
+
+    <script src="./index.js"></script>
+    <script>
+    // console.log($('.box').get('height'))
+    // $('.box').height()
+    var vue = new Vue({
+        el:'app',
+        data:{
+            name:'appp'
+        }
+    })
+    console.log(vue)
+
+
+
+    // var emailArr = ["gmail.com", "yahoo.com", "hotmail.com", "outlook.com", "icloud.com", "rediffmail.com",
+    //     "yahoo.co.in", "yahoo.co.uk", "hotmail.co.uk", "live.com",
+    //     "ymail.com", "aol.com"
+    // ];
+
+    // var vConsole = new VConsole();
+    // var text = $('#name');
+    // var addCom = function (e) {
+    //     var val = $(this).val(),
+    //         suffix = str = "";
+    //     var idx = val.indexOf('@');
+    //     if (idx > -1) {
+    //         suffix = val.slice(idx+ 1);
+    //         var restArr = emailArr.filter(function (email) {
+    //             return email.indexOf(suffix) > -1
+    //         });
+    //         if(restArr.length>0){
+    //             restArr.forEach(function (suffix) {
+    //                 str += "<li class='email-suffix-item'>" + suffix + "</li>"
+    //             })
+    //             var translateX = $(this).val().length*12
+    //             $('.email-suffix').css({
+    //                 transform:"translate3d("+translateX+"px,0,0)"
+    //             })
+    //         }
+    //         if(str){
+    //             $('.email-suffix').html(str)
+    //             if($('.email-suffix').css('display')==='none'){
+    //                 $('.email-suffix').toggle()
+    //             }
+    //         }else{
+    //             $('.email-suffix').hide()
+    //         }
+            
+    //     }
+        
+    // }
+
+    // text.on({
+    //     input: addCom,
+    //     blur: function () {
+    //         console.log('off')
+    //         //解绑input事件
+    //         var evets = $.data(this, 'events') || $._data(this, 'events')
+    //         var evetKeys = Object.keys(evets)
+    //         var hasInput = evetKeys.indexOf('input') > -1 ? true : false
+    //         if (hasInput) {
+    //             if (evets.input.length) {
+    //                 evets.input.forEach(function (evet) {
+    //                     if (evet.handler === addCom) {
+    //                         $(this).off('input', addCom)
+    //                     }
+    //                 })
+    //             }
+    //         }
+    //     }
+    // })
+
+    // $('.email-suffix').on('click','.email-suffix-item',function(){
+    //     var idx = text.val().indexOf('@')
+    //     text.val(text.val().slice(0,idx+1)+$(this).text());
+    //     $('.email-suffix').toggle();
+    // })
+</script>
+    <!-- <script>
+var defaultOptions = {
+    emailArr: ["gmail.com", "yahoo.com", "hotmail.com", "outlook.com", "icloud.com", "rediffmail.com",
+        "yahoo.co.in", "yahoo.co.uk", "hotmail.co.uk", "live.com",
+        "ymail.com", "aol.com"
+    ],
+    checkEvet:'input',
+    checkHandler:function(){},
+    blurHandler:function(){}
+}
+$.fn.emailSuffix = function (options) {
+   return this.each(function(){
+       $.emailSuffix.init($(this),options)
+   })
+}
+$.emailSuffix={
+   init:function(el,options){
+       var opt = $.extend({},defaultOptions,options);
+       this.el = el;
+       this.emailArr = opt.emailArr;
+       this.checkEvet = opt.checkEvet;
+       this.checkHandler = opt.checkHandler;
+       this.blurHandler = opt.blurHandler;
+        var input = el.find('input')
+       console.log('opt',opt,input);
+
+       input.on(this.checkEvet,this.checkHandler.bind(input.get(0)))
+       input.on('blur',this.blurHandler.bind(input.get(0)))
+       $('.email-suffix').on('click','.email-suffix-item',function(){
+           var idx = input.val().indexOf('@')
+           input.val(input.val().slice(0,idx)+$(this).text());
+           $('.email-suffix').toggle();
+       })
+   }
+}
+
+var emailArr = ["gmail.com", "yahoo.com", "hotmail.com", "outlook.com", "icloud.com", "rediffmail.com",
+    "yahoo.co.in", "yahoo.co.uk", "hotmail.co.uk", "live.com","ymail.com", "aol.com"
+];
+var addCom = function (e) {
+    var val = $(this).val(),
+        suffix = str = "";
+        console.log(this)
+    
+    var idx = val.indexOf('@');
+    if (idx > -1) {
+        suffix = val.slice(idx+ 1);
+        var restArr = emailArr.filter(function (email) {
+            return email.indexOf(suffix) > -1
+        });
+        if(restArr.length>0){
+            restArr.forEach(function (suffix) {
+                str += "<li class='email-suffix-item'>@" + suffix + "</li>"
+            })
+            var translateX = $(this).val().length*7+16;
+            $('.email-suffix').css({
+                transform:"translate3d("+translateX+"px,0,0)"
+            })
+        }
+        if(str){
+            $('.email-suffix').html(str)
+            if($('.email-suffix').css('display')==='none'){
+                $('.email-suffix').toggle()
+            }
+        }else{
+            $('.email-suffix').hide()
+        }
+        return
+    }
+    $('.email-suffix').hide()
+    
+}
+var blur = function(){
+    var evets = $.data(this, 'events') || $._data(this, 'events')
+    var evetKeys = Object.keys(evets)
+    var hasInput = evetKeys.indexOf('input') > -1 ? true : false
+    if (hasInput) {
+        if (evets.input.length) {
+            evets.input.forEach(function (evet) {
+                if (evet.handler === addCom) {
+                    $(this).off('input', addCom)
+                }
+            })
+        }
+    }
+}
+var s1 =$('.email-box').emailSuffix({
+    emailArr,
+    checkEvet:'input',
+    checkHandler:addCom,
+    blurHandler:blur
+}) -->
+
+</script>
+</html>
