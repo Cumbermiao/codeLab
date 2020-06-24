@@ -21,11 +21,14 @@
       context.lineWidth = 2
       //left-top
       if (width > 0) context.moveTo(x + radius, y)
-      else context.moveTo(x - radius, y)
+      else context.moveTo(x, y)
       context.fillStyle = 'blue'
       context.fillRect(x + radius, y, 5,5)
       context.fillStyle = 'red'
       context.arcTo( x+width, y, x+width, y + width, radius)
+      context.arcTo( x+width, y + width, x, y + width, radius)
+      context.arcTo( x, y + width, x, y, radius)
+      context.arcTo( x, y , x+ width, y, radius)
       context.stroke()
     }
 
