@@ -1,22 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
 </head>
+
 <body>
   <canvas id="can" width="600" height="600"></canvas>
 </body>
 <script>
-const canvas = document.getElementById('can')
-const context = canvas.getContext('2d')
+  const canvas = document.getElementById('can')
+  const context = canvas.getContext('2d')
 
-const innerRadius = 200
-const outerRadius = 250
-const ringBgColor = 'rgba(0, 0, 230, 0.9)'
-const ringBdColor = 'rgba(100, 140, 230, 0.9)'
+  const innerRadius = 220
+  const outerRadius = 250
+  const ringBgColor = 'rgba(0, 0, 230, 0.2)'
+  const ringBdColor = 'rgba(100, 140, 230, 0.9)'
+  const shortTick = 10
+  const longTick = 20
+  const tickColor = 'rgba(100,140,230,0.9)'
+  const textSize = 12
+  const cental = [300, 300]
+
+  function drawRing() {
+    context.strokeStyle = ringBdColor
+    context.fillStyle = ringBgColor
+    context.beginPath()
+    context.arc(300, 300, outerRadius, 0, Math.PI * 2)
+    // context.fill()
+    // context.stroke()
+    // context.beginPath()
+    context.arc(300, 300, innerRadius, 0, Math.PI * 2, true)
+    context.fill()
+    context.stroke()
+  }
+
+  function drawTickAndText() {
+
+    const deltaAngle = 5
+    const textGap = 10 
+    const lines = [longTick, shortTick]
+    context.lineWidth = 1
+    context.strokeStyle = 'black'
+    
+    for (let i = 0; i < 72; i++) {
+      context.beginPath()
+      const hudu = 5 / 180 * Math.PI
+      const deltaX = Math.cos(hudu*i) * innerRadius
+      const deltaY = Math.sin(hudu*i) * innerRadius
+      const line = lines[i % 2]
+      console.log(i, deltaX,deltaY, cental[0] + deltaX, cental[1] + deltaY,cental[0] + deltaX - Math.cos(hudu) * line, cental[1] + deltaY - Math.sin(hudu) * line)
+      context.moveTo(cental[0] + deltaX, cental[1] + deltaY)
+      context.lineTo(cental[0] + deltaX - Math.cos(hudu*i) * line, cental[1] + deltaY - Math.sin(hudu*i) * line)
+      if(i%4 === 0){
+        context.font = `${textSize}px MicrosoftYahei`
+        context.fillText(i*5,cental[0] + deltaX - Math.cos(hudu*i) * (line+textGap), cental[1] + deltaY - Math.sin(hudu*i) * (line+textGap))
+      }
+      context.stroke()
+    }
+
+
+  }
+
+  drawRing()  
+  drawTickAndText()
+
 
 </script>
+
 </html>
