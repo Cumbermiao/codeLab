@@ -17,47 +17,51 @@
 
   const innerRadius = 220
   const outerRadius = 250
-  const ringBgColor = 'rgba(0, 0, 230, 0.2)'
+  const ringBgColor = 'rgba(100, 140, 230, 0.1)'
   const ringBdColor = 'rgba(100, 140, 230, 0.9)'
-  const shortTick = 10
-  const longTick = 20
+  const shortTick = 5
+  const longTick = 10
   const tickColor = 'rgba(100,140,230,0.9)'
+  const dialStrokeColor = 'rgba(100,140,230,0.9)'
+
   const textSize = 12
   const cental = [300, 300]
 
   function drawRing() {
-    context.strokeStyle = ringBdColor
+    context.strokeStyle = dialStrokeColor
     context.fillStyle = ringBgColor
     context.beginPath()
     context.arc(300, 300, outerRadius, 0, Math.PI * 2)
-    // context.fill()
-    // context.stroke()
-    // context.beginPath()
-    context.arc(300, 300, innerRadius, 0, Math.PI * 2, true)
-    context.fill()
     context.stroke()
+    context.strokeStyle = 'rgba(0, 0, 0, 0.1)';
+    context.arc(300, 300, innerRadius, 0, Math.PI * 2, true)
+    context.stroke()
+    context.fill()
+    
   }
 
   function drawTickAndText() {
-
+    context.textAlign = 'center';
+    context.textBaseline = 'middle';
     const deltaAngle = 5
-    const textGap = 10 
+    const textGap = 10
     const lines = [longTick, shortTick]
     context.lineWidth = 1
     context.strokeStyle = 'black'
+    context.fillStyle = 'black'
     
     for (let i = 0; i < 72; i++) {
       context.beginPath()
-      const hudu = 5 / 180 * Math.PI
-      const deltaX = Math.cos(hudu*i) * innerRadius
-      const deltaY = Math.sin(hudu*i) * innerRadius
+      const hudu = 5*i / 180 * Math.PI
+      const deltaX = Math.cos(hudu) * innerRadius
+      const deltaY = Math.sin(hudu) * innerRadius
       const line = lines[i % 2]
-      console.log(i, deltaX,deltaY, cental[0] + deltaX, cental[1] + deltaY,cental[0] + deltaX - Math.cos(hudu) * line, cental[1] + deltaY - Math.sin(hudu) * line)
-      context.moveTo(cental[0] + deltaX, cental[1] + deltaY)
-      context.lineTo(cental[0] + deltaX - Math.cos(hudu*i) * line, cental[1] + deltaY - Math.sin(hudu*i) * line)
+      context.moveTo(cental[0] + deltaX, cental[1] - deltaY)
+      context.lineTo(cental[0] + deltaX - Math.cos(hudu) * line, cental[1] - deltaY + Math.sin(hudu) * line)
+      console.log(deltaX, deltaY, cental[0] + deltaX, cental[1] + deltaY)
       if(i%4 === 0){
         context.font = `${textSize}px MicrosoftYahei`
-        context.fillText(i*5,cental[0] + deltaX - Math.cos(hudu*i) * (line+textGap), cental[1] + deltaY - Math.sin(hudu*i) * (line+textGap))
+        context.fillText(i*5,cental[0] + deltaX - Math.cos(hudu) * (line+textGap), cental[1]  - deltaY + Math.sin(hudu) * (line+textGap))
       }
       context.stroke()
     }

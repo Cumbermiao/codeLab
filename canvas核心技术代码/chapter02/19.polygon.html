@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Polygon Objects</title>
+
+  <style>
+    body {
+      background: #eeeeee;
+    }
+
+    #controls {
+      position: absolute;
+      left: 25px;
+      top: 25px;
+    }
+
+    #canvas {
+      background: #ffffff;
+      cursor: crosshair;
+      margin-left: 10px;
+      margin-top: 10px;
+      -webkit-box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+      margin-top: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id='canvas' width='850' height='600'>
+    Canvas not supported
+  </canvas>
+
+  <div id='controls'>
+    Stroke color: <select id='strokeStyleSelect'>
+      <option value='red'>red</option>
+      <option value='green'>green</option>
+      <option value='blue'>blue</option>
+      <option value='orange'>orange</option>
+      <option value='cornflowerblue' selected>cornflowerblue</option>
+      <option value='goldenrod'>goldenrod</option>
+      <option value='navy'>navy</option>
+      <option value='purple'>purple</option>
+    </select>
+
+    Fill color: <select id='fillStyleSelect'>
+      <option value='rgba(255,0,0,0.5)'>semi-transparent red</option>
+      <option value='green'>green</option>
+      <option value='rgba(0,0,255,0.5)'>semi-transparent blue</option>
+      <option value='orange'>orange</option>
+      <option value='rgba(100,140,230,0.5)'>semi-transparent cornflowerblue</option>
+      <option value='goldenrod' selected>goldenrod</option>
+      <option value='navy'>navy</option>
+      <option value='purple'>purple</option>
+    </select>
+
+    Sides: <select id='sidesSelect'>
+      <option value=4 select>4</option>
+      <option value=6>6</option>
+      <option value=8>8</option>
+      <option value=10>10</option>
+      <option value=12>12</option>
+      <option value=20>20</option>
+    </select>
+
+
+    Start angle: <select id='startAngleSelect'>
+      <option value=0 select>0</option>
+      <option value=22.5>22.5</option>
+      <option value=45>45</option>
+      <option value=67.5>67.5</option>
+      <option value=90>90</option>
+    </select>
+
+    Fill <input id='fillCheckbox' type='checkbox' checked />
+    <input id='eraseAllButton' type='button' value='Erase all' />
+  </div>
+</body>
+<script>
+  const canvas = document.getElementById('canvas')
+  const context = canvas.getContext('2d')
+  const strokeStyleSelector = document.getElementById('strokeStyleSelect')
+  const fillStyleSelector = document.getElementById('fillStyleSelect')
+  const sidesSelector = document.getElementById('sidesSelect')
+  const startAngleSelector = document.getElementById('startAngleSelect')
+  const fillSelector = document.getElementById('fillCheckbox')
+  const eraseSelector = document.getElementById('eraseAllButton')
+
+  function Points(x, y) {
+    this.x = x
+    this.y = y
+  }
+
+  function Polygon(center, sideCount = 3, radius = 0, startAngle = 0, filled = true, strokeStyle = 'black', fillStyle = 'black') {
+    console.log([...arguments])
+    this.center = center || new Points(0, 0)
+    this.side = sideCount
+    this.radius = radius
+    this.filled = filled
+    this.startAngle = startAngle
+    this.strokeStyle = strokeStyle
+    this.fillStyle = fillStyle
+  }
+  Polygon.prototype.getPoints = function () {
+    const points = []
+    let startAngle = this.startAngle || 0
+    let delta = 360 / this.side
+    for (let i = 0; i < this.side; i++) {
+      let angle = startAngle + delta * i
+      console.log(angle)
+      points.push(new Points(
+        this.center.x + this.radius * Math.cos(Math.PI * angle / 180),
+        this.center.y - this.radius * Math.sin(Math.PI * angle / 180)
+      ))
+    }
+    return points
+  }
+  Polygon.prototype.createPath = function () {
+    const points = this.getPoints()
+    console.log(points)
+    context.beginPath()
+    context.moveTo(points[0].x, points[0].y)
+    for (let i = 1; i < points.length; i++) {
+      context.lineTo(points[i].x, points[i].y)
+    }
+    context.closePath()
+  }
+
+  Polygon.prototype.stroke = function () {
+    context.save()
+    this.createPath()
+    context.strokeStyle = this.strokeStyle
+    context.stroke()
+    context.restore()
+
+  }
+  Polygon.prototype.fill = function () {
+    context.save()
+    this.createPath()
+    context.fillStyle = this.fillStyle
+    context.fill()
+    context.restore()
+  }
+  Polygon.prototype.move = function (x, y) {
+    this.center = new Points(x, y)
+  }
+
+  function drawGrid(color, stepx, stepy) {
+    context.save()
+
+    context.shadowColor = undefined;
+    context.shadowOffsetX = 0;
+    context.shadowOffsetY = 0;
+
+    context.strokeStyle = color;
+    context.fillStyle = '#ffffff';
+    context.lineWidth = 0.5;
+    context.fillRect(0, 0, context.canvas.width, context.canvas.height);
+
+    for (var i = stepx + 0.5; i < context.canvas.width; i += stepx) {
+      context.beginPath();
+      context.moveTo(i, 0);
+      context.lineTo(i, context.canvas.height);
+      context.stroke();
+    }
+
+    for (var i = stepy + 0.5; i < context.canvas.height; i += stepy) {
+      context.beginPath();
+      context.moveTo(0, i);
+      context.lineTo(context.canvas.width, i);
+      context.stroke();
+    }
+
+    context.restore();
+  }
+
+  let draging = false
+  let prePos = { x: 0, y: 0 }
+  let imgData = null
+  let polygon = null
+
+  function windowToCanvas(x, y) {
+    const box = canvas.getBoundingClientRect()
+    return {
+      x: x - box.left,
+      y: y - box.top
+    }
+  }
+
+  function saveImgData() {
+    imgData = context.getImageData(0, 0, canvas.width, canvas.height)
+  }
+
+  function restoreImg() {
+    context.putImageData(imgData,0, 0)
+  }
+
+  canvas.onmousedown = function (e) {
+    let pos = windowToCanvas(e.clientX, e.clientY)
+    prePos = pos
+    draging = true
+    saveImgData()
+  }
+
+  canvas.onmousemove = function (e) {
+    if (draging) {
+      restoreImg()
+      let curPos = windowToCanvas(e.clientX, e.clientY)
+      let deltaX = curPos.x - prePos.x
+      let deltaY = curPos.y - prePos.y
+      let radius = Math.abs(deltaX) > Math.abs(deltaY) ? Math.abs(deltaX) : Math.abs(deltaY)
+      drawPolygon(prePos,radius)
+    }
+  }
+
+  canvas.onmouseup = function (e) {
+    draging = false
+    let curPos = windowToCanvas(e.clientX, e.clientY)
+    let deltaX = curPos.x - prePos.x
+    let deltaY = curPos.y - prePos.y
+    let radius = Math.abs(deltaX) > Math.abs(deltaY) ? Math.abs(deltaX) : Math.abs(deltaY)
+    drawPolygon(prePos,radius)
+    saveImgData()
+  }
+
+  function init(){
+    drawGrid('lightgrey', 10, 10)
+
+  }
+
+  function drawPolygon(center,radius){
+    let strokeStyle = strokeStyleSelector.value
+    let fillStyle = fillStyleSelector.value
+    let side = sidesSelector.value
+    let startAngle = startAngleSelector.value
+    let filled = !!fillSelector.checked
+    polygon = new Polygon(new Points(prePos.x, prePos.y), side, radius, startAngle,filled , strokeStyle , fillStyle)
+    filled?polygon.fill():polygon.stroke()
+  }
+
+  
+
+
+</script>
+
+</html>
