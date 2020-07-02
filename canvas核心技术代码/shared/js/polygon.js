@@ -2,7 +2,7 @@ function Points(x, y) {
    this.x = x
    this.y = y
  }
-
+ 
  function Polygon(center, sideCount = 3, radius = 0, startAngle = 0, filled = true, strokeStyle = 'black', fillStyle = 'black') {
    this.center = center || new Points(0, 0)
    this.side = sideCount

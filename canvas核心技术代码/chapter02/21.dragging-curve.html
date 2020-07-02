@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <canvas id="can" width="600" height="600"></canvas>
+  <script src="../shared/js/polygon.js"></script>
+  <script>
+    const canvas = document.getElementById('can')
+    const context = canvas.getContext('2d')
+
+    const curvues = [] // 贝塞尔曲线
+
+    function BezierCurve(context=context, origin, endPoint, controller1, controller2, lineWidth=4, strokeStyle){
+      this.context = context
+      this.origin = origin
+      this.endPoint = endPoint
+      this.controllers = [controller1, controller2]
+      this.lineWidth = lineWidth
+      this.strokeStyle = strokeStyle
+    }
+
+    BezierCurve.prototype.createPath = function(){
+      this.context.moveTo(this.origin.x, this.origin.y)
+      this.context.bezierCurveTo(this.controllers[0].x, this.controllers[0].y,this.controllers[1].x, this.controllers[1].y,this.endPoint.x, this.endPoint.y)
+    }
+
+    BezierCurve.prototype.stroke = function(){
+      this.context.beginPath()
+      this.createPath()
+      this.context.strokeStyle = this.strokeStyle
+      this.context.lineWidth = this.lineWidth
+      this.context.stroke()
+    }
+
+    BezierCurve.prototype.isTerminalPoint = function(x,y){
+      return (this.origin.x === x && this.origin.y === y) || (this.endPoint.x === x && this.endPoint.y === y)
+    }
+
+
+    window.onload = function(){
+      let origin = new Points(10,10)
+      let endPoint = new Points(100,100)
+      let controller1 = new Points(20, 20)
+      let controller2 = new Points(30, 30)
+      let a = new BezierCurve(context,origin, endPoint, controller1, controller2, 1, 'black' )
+      a.stroke()
+      a.isPointInPath(11,11)
+      a.isPointInPath(10,10)
+      a.isPointInPath(100,100)
+      a.isPointInPath(20,20)
+    }
+
+    canvas.onmousedown = function(e){
+
+    }
+  </script>
+</body>
+</html>
